@@ -1,0 +1,188 @@
+@import 'partials/fonts';
+@import 'partials/mixins';
+
+body {
+    font-family: 'Avenir';
+    margin: 0;
+}
+p {
+    font-size: $p-mobile-fontsize;
+
+    @include tablet {
+        font-size: $p-desktab-fontsize;
+    }
+}
+a {
+    text-align: center;
+    width: 50%;
+}
+.nav-bar {
+    background-color: $primary-color;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    &__main-logo {
+        display: inline-flex;
+        height: 20px;
+        vertical-align: center;
+        margin: 5% auto;
+    }
+    &__menu {
+        margin: 0;
+        width: 100%;
+        padding: 0;
+        display: flex;
+
+        &-link {
+            color: white;
+            font-size: $h3-mobile-fontsize;
+            list-style-type: none;
+            padding: 8% 0;
+
+
+            &--active {
+                border-bottom: 5px solid white;
+            }
+        }
+    }
+}
+a {
+    text-decoration: none;
+}
+.hero {
+    display: flex;
+    align-items: center;
+    background-image: url('/assets/images/Hero-photo.jpg'), linear-gradient(rgba(0,0,0,0.2));;
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-blend-mode: overlay;
+    height: 33vh;
+}
+.hero__title {
+    font-size: $h1-mobile-fontsize;
+    color: white;
+    padding-left: 7%;
+    line-height: 140%;
+    margin: 0;
+}
+.main-section {
+    display: block;
+
+    &__title {
+        padding: 2% 7% 0 7%;
+    }
+    &__image {
+        width: 85%;
+        display: block;
+        margin: 0 auto;
+    }
+    &__container1 {
+        padding: 1% 15% 0 7%;
+    }
+    &__quote1 {
+        line-height: 20px;
+        font-weight: 600;
+    }
+    &__quote2 {
+        font-weight: 600;
+        font-size: $h4-mobile-fontsize;
+        padding: 8% 0;
+    }
+    &__content-title {
+        margin: 4% 0 1% 0;
+        font-weight: 600;
+    }
+    &__container2 {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &__content {
+        display: inline-flex;
+        line-height: 20px;
+        padding: 0 7%;
+    }
+}
+.sub-section {
+    background-color: $secondary-color;
+    width: 100%;
+
+    &__title {
+        padding: 10% 0 0 7%;
+    }
+    &__photo-gallery {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 2% 4% 0 4%;
+        padding-bottom: 3%;
+    }
+    &__photo {
+        width: 92%;
+        margin: 4%;
+    }
+}
+.footer {
+    background-color: $primary-color;
+    color: white;
+    padding-bottom: 2%;
+
+    &__heading {
+        padding: 5% 0;
+
+        &-title {
+            margin: 0;
+            min-width: 100px;
+            padding: 5% 2% 5% 7%;
+        }
+        &-logo-container {
+            width: 100%;
+            padding-left: 7%;
+        }
+        &-logo {
+            padding: 4% 8% 4% 0;
+            width: 20px;
+        }
+        &-logo2 {
+            width: 11px;
+        }
+    }
+    &__main-logo {
+        display: none; 
+    }
+    &__container {
+        padding: 0 7%;
+        width: 100%;
+    }
+    &__content {
+        margin: 7% 0;
+        width: 100%;
+        line-height: 17px;
+
+        &1 {
+            font-weight: 600;
+            margin: 0;
+            font-size: 0.72rem;
+            letter-spacing: 1px;
+        }
+    }
+    &__copyright {
+        margin: 3% 0 0 7%;
+        width: 63%;
+        line-height: 15px;
+    }
+}
+h1 {
+    font-size: $h1-mobile-fontsize;
+}
+h2 {
+    font-size: $h2-mobile-fontsize;
+}
+h3 {
+    font-size: $h3-mobile-fontsize;
+}
+h4 {
+    font-size: $h4-mobile-fontsize;
+}

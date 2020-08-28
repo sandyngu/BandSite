@@ -1,0 +1,234 @@
+@font-face {
+  font-family: "Avenir";
+  src: url("../assets/fonts/AvenirNextProLT/Linotype - AvenirNextLTPro-Regular.otf") format("OpenType");
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Avenir";
+  src: url("../assets/fonts/AvenirNextProLT/Linotype - AvenirNextLTPro-Bold.otf") format("OpenType");
+  font-weight: bold;
+}
+@font-face {
+  font-family: "Avenir";
+  src: url("../assets/fonts/AvenirNextProLT/Linotype - AvenirNextLTPro-Demi.otf") format("OpenType");
+  font-weight: 600;
+}
+/*5.75*/
+/*4*/
+body {
+  font-family: "Avenir";
+  margin: 0;
+}
+
+p {
+  font-size: 0.75rem;
+}
+@media screen and (min-width: 768px) {
+  p {
+    font-size: 0.75rem;
+  }
+}
+
+a {
+  text-align: center;
+  width: 50%;
+}
+
+.nav-bar {
+  background-color: #323232;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.nav-bar__main-logo {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 20px;
+  vertical-align: center;
+  margin: 5% auto;
+}
+.nav-bar__menu {
+  margin: 0;
+  width: 100%;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.nav-bar__menu-link {
+  color: white;
+  font-size: 0.9rem;
+  list-style-type: none;
+  padding: 8% 0;
+}
+.nav-bar__menu-link--active {
+  border-bottom: 5px solid white;
+}
+
+a {
+  text-decoration: none;
+}
+
+.hero {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-image: url("/assets/images/Hero-photo.jpg"), -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.2)));
+  background-image: url("/assets/images/Hero-photo.jpg"), linear-gradient(rgba(0, 0, 0, 0.2));
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-blend-mode: overlay;
+  height: 33vh;
+}
+
+.hero__title {
+  font-size: 1.5rem;
+  color: white;
+  padding-left: 7%;
+  line-height: 140%;
+  margin: 0;
+}
+
+.main-section {
+  display: block;
+}
+.main-section__title {
+  padding: 2% 7% 0 7%;
+}
+.main-section__image {
+  width: 85%;
+  display: block;
+  margin: 0 auto;
+}
+.main-section__container1 {
+  padding: 1% 15% 0 7%;
+}
+.main-section__quote1 {
+  line-height: 20px;
+  font-weight: 600;
+}
+.main-section__quote2 {
+  font-weight: 600;
+  font-size: 0.8rem;
+  padding: 8% 0;
+}
+.main-section__content-title {
+  margin: 4% 0 1% 0;
+  font-weight: 600;
+}
+.main-section__container2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.main-section__content {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  line-height: 20px;
+  padding: 0 7%;
+}
+
+.sub-section {
+  background-color: #FAFAFA;
+  width: 100%;
+}
+.sub-section__title {
+  padding: 10% 0 0 7%;
+}
+.sub-section__photo-gallery {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 2% 4% 0 4%;
+  padding-bottom: 3%;
+}
+.sub-section__photo {
+  width: 92%;
+  margin: 4%;
+}
+
+.footer {
+  background-color: #323232;
+  color: white;
+  padding-bottom: 2%;
+}
+.footer__heading {
+  padding: 5% 0;
+}
+.footer__heading-title {
+  margin: 0;
+  min-width: 100px;
+  padding: 5% 2% 5% 7%;
+}
+.footer__heading-logo-container {
+  width: 100%;
+  padding-left: 7%;
+}
+.footer__heading-logo {
+  padding: 4% 8% 4% 0;
+  width: 20px;
+}
+.footer__heading-logo2 {
+  width: 11px;
+}
+.footer__main-logo {
+  display: none;
+}
+.footer__container {
+  padding: 0 7%;
+  width: 100%;
+}
+.footer__content {
+  margin: 7% 0;
+  width: 100%;
+  line-height: 17px;
+}
+.footer__content1 {
+  font-weight: 600;
+  margin: 0;
+  font-size: 0.72rem;
+  letter-spacing: 1px;
+}
+.footer__copyright {
+  margin: 3% 0 0 7%;
+  width: 63%;
+  line-height: 15px;
+}
+
+h1 {
+  font-size: 1.5rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 0.9rem;
+}
+
+h4 {
+  font-size: 0.8rem;
+}
+/*# sourceMappingURL=main.css.map */
