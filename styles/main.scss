@@ -9,25 +9,45 @@ p {
     font-size: $p-mobile-fontsize;
 
     @include tablet {
-        font-size: $p-desktab-fontsize;
+        font-size: 1rem;
+    }
+    @include desktop {
+        font-size: 1rem;
     }
 }
 a {
     text-align: center;
-    width: 50%;
+
+    @include mobile {
+        width: 50%;
+    }
 }
 .nav-bar {
     background-color: $primary-color;
     display: flex;
     align-items: center;
-    flex-wrap: wrap;
-    justify-content: center;
+
+    @include mobile {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
 
     &__main-logo {
         display: inline-flex;
         height: 20px;
         vertical-align: center;
-        margin: 5% auto;
+
+        @include mobile {
+            margin: 5% auto;
+        }
+
+        @include tablet {
+            padding-left: 3%;
+        }
+
+        @include desktop {
+            padding-left: 12%;
+        }
     }
     &__menu {
         margin: 0;
@@ -37,10 +57,28 @@ a {
 
         &-link {
             color: white;
-            font-size: $h3-mobile-fontsize;
             list-style-type: none;
-            padding: 8% 0;
 
+            @include mobile {
+                font-size: $h3-mobile-fontsize;
+                padding: 8% 0;
+            }
+            @include tablet {
+                display: inline-flex;
+                margin: 35px 0 0 70px;
+                padding-bottom: 20px;
+                font-size: $h4-desktab-fontsize;
+                vertical-align: center; 
+            }
+
+            @include desktop {
+                display: inline-flex;
+                align-items: flex-end;
+                margin: 35px 0 0 70px;
+                padding-bottom: 20px;
+                font-size: $h4-desktab-fontsize;
+                vertical-align: center;
+            }
 
             &--active {
                 border-bottom: 5px solid white;
@@ -52,57 +90,140 @@ a {
     text-decoration: none;
 }
 .hero {
-    display: flex;
     align-items: center;
     background-image: url('/assets/images/Hero-photo.jpg'), linear-gradient(rgba(0,0,0,0.2));;
     background-size: cover;
     background-position: bottom;
     background-repeat: no-repeat;
     background-blend-mode: overlay;
-    height: 33vh;
+    display: flex;
+
+    @include mobile {
+        height: 33vh;
+    }
+    @include tablet {
+        height: 75vh;
+    }
+    @include desktop {
+        height: 75vh;
+    }
 }
 .hero__title {
-    font-size: $h1-mobile-fontsize;
     color: white;
-    padding-left: 7%;
-    line-height: 140%;
     margin: 0;
+    line-height: 140%;
+    align-items: center;
+
+    @include mobile {
+        font-size: $h1-mobile-fontsize;
+        padding-left: 7%;
+    }
+    @include tablet {
+        padding-left: 3%;
+    }
+    @include desktop {
+        padding-left: 3%;;
+    }
 }
 .main-section {
     display: block;
 
     &__title {
-        padding: 2% 7% 0 7%;
+        @include mobile {
+            padding: 2% 7% 0 7%;
+        }
+        @include tablet {
+            padding: 3%;
+        }
+        @include desktop {
+            padding: 1% 12%;
+        }
     }
     &__image {
-        width: 85%;
         display: block;
         margin: 0 auto;
+
+        @include mobile {
+            width: 85%;
+        }
+        @include tablet {
+            width: 94%;
+        }
+        @include desktop {
+            width: 67%;
+        }
     }
     &__container1 {
-        padding: 1% 15% 0 7%;
+
+        @include mobile {
+            padding: 1% 15% 0 7%;
+        }
+        @include tablet {
+            padding: 1% 15% 0 3%;
+        }
+        @include desktop {
+            padding: 1% 15% 0 16.5%;
+        }
     }
     &__quote1 {
-        line-height: 20px;
-        font-weight: 600;
+
+        @include mobile {
+            line-height: 20px;
+            font-weight: 600;
+        }
+
+        @include desktop {
+            line-height: 30px;
+        }
     }
     &__quote2 {
         font-weight: 600;
-        font-size: $h4-mobile-fontsize;
-        padding: 8% 0;
+
+        @include mobile {
+            font-size: $h4-mobile-fontsize;
+            padding: 8% 0;
+        }
+        @include desktop {
+            font-size: 1.1rem;
+            padding: 2% 0;
+        }
     }
     &__content-title {
         margin: 4% 0 1% 0;
-        font-weight: 600;
+
+        @include mobile {
+            font-weight: 600;
+        }
     }
     &__container2 {
         display: flex;
-        flex-wrap: wrap;
+        justify-content: center;
+
+        @include mobile {
+            flex-wrap: wrap;
+        }
     }
     &__content {
         display: inline-flex;
         line-height: 20px;
-        padding: 0 7%;
+
+        @include mobile {
+            padding: 0 7%;
+        }
+        @include tablet {
+            flex-wrap: wrap;
+            width: 460px;
+            padding: 0 3%;
+            font-size: $h4-desktab-fontsize;
+            line-height: 22px;           
+        }
+        @include desktop {
+            flex-wrap: wrap;
+            width: 460px;
+            padding: 0 1.5%;
+            font-size: $h4-desktab-fontsize;
+            letter-spacing: 0.7px;
+        }
     }
 }
 .sub-section {
@@ -110,7 +231,15 @@ a {
     width: 100%;
 
     &__title {
-        padding: 10% 0 0 7%;
+        @include mobile {
+            padding: 10% 0 0 7%;
+        }
+        @include tablet {
+            padding: 5% 0 0 3%;
+        }
+        @include desktop {
+            padding: 5% 0 0 12%;
+        }
     }
     &__photo-gallery {
         display: flex;
@@ -118,10 +247,26 @@ a {
         justify-content: center;
         margin: 2% 4% 0 4%;
         padding-bottom: 3%;
+
+        @include tablet {
+            margin: 0;
+            padding-left: 1%;
+        }
     }
     &__photo {
-        width: 92%;
-        margin: 4%;
+
+        @include mobile {
+            width: 92%;
+            margin: 4%;
+        }
+        @include tablet {
+            width: 30%;
+            margin: 1.25%;
+        }
+        @include desktop {
+            width: 26%;
+            margin: 1.25%;
+        }
     }
 }
 .footer {
@@ -130,59 +275,217 @@ a {
     padding-bottom: 2%;
 
     &__heading {
-        padding: 5% 0;
+        @include mobile {
+            padding: 5% 0;
+        }
+        @include tablet {
+            display: flex;
+            justify-content: space-between;
+            padding: 4% 0;
+        }
+        @include desktop {
+            display: flex;
+            justify-content: space-between;
+            padding: 4% 0; 
+        }
 
         &-title {
             margin: 0;
-            min-width: 100px;
-            padding: 5% 2% 5% 7%;
+
+            @include mobile {
+                min-width: 100px;
+                padding: 5% 2% 5% 7%;
+            }
+            @include tablet {
+                min-width: 250px;
+                padding: 1% 2% 0 3%;
+                vertical-align: center;
+            }
+            @include desktop {
+                min-width: 250px;
+                padding: 1% 2% 0 12%;
+                vertical-align: center;
+            }
         }
         &-logo-container {
-            width: 100%;
-            padding-left: 7%;
+
+            @include mobile {
+                width: 100%;
+                padding-left: 7%;
+            }
+            @include tablet {
+                display: inline-flex;
+                width: 100%;
+            }
+            @include desktop {
+                display: inline-flex;
+                width: 100%;
+            }
         }
         &-logo {
-            padding: 4% 8% 4% 0;
-            width: 20px;
+            
+            @include mobile {
+                padding: 4% 8% 4% 0;
+                width: 20px;
+            }
+            @include tablet {
+                display: inline-flex;
+                padding: 0 8% 0 0;
+                width: 25px;
+            }
+            @include desktop {
+                display: inline-flex;
+                padding: 0 8% 0 0;
+                width: 25px;
+            }
         }
         &-logo2 {
-            width: 11px;
+
+            @include mobile {
+                width: 11px;
+            }
+            @include tablet {
+                width: 15px;
+            }
+            @include desktop {
+                width: 15px;
+            }
         }
     }
     &__main-logo {
-        display: none; 
+        @include mobile {
+            display: none; 
+        }
+        
+        @include tablet {
+            display: inline-flex;
+            height: 20px;
+            padding: 2% 3%;
+        }
+        
+        @include desktop {
+            display: inline-flex;
+            height: 20px;
+            padding: 1.5% 10% 2% 2%;
+        }
     }
     &__container {
-        padding: 0 7%;
-        width: 100%;
+
+        @include mobile {
+            padding: 0 7%;
+            width: 100%;
+        }
+        @include tablet {
+            display: flex;
+            justify-content: space-between;
+            padding: 0 0 0 3%;
+            width: 90%;
+        }
+        @include desktop {
+            display: flex;
+            padding: 0 12%;
+            justify-content: space-between;
+            width: 60%;
+        }
     }
     &__content {
-        margin: 7% 0;
         width: 100%;
-        line-height: 17px;
+        @include mobile {
+            margin: 7% 0;
+            line-height: 17px;
+        }
+        @include tablet {
+            padding-top: 10px;
+            width: 100%;
+            line-height: 20px;
+            display: flex;
+            font-size: $h4-desktab-fontsize;
+            margin: 1%;
+        }
+        @include desktop {
+            padding-top: 10px;
+            width: 100%;
+            line-height: 20px;
+            display: flex;
+            font-size: $h4-desktab-fontsize;
+            margin: 1%; 
+        }
 
         &1 {
             font-weight: 600;
             margin: 0;
-            font-size: 0.72rem;
-            letter-spacing: 1px;
+
+            @include mobile {
+                font-size: 0.72rem;
+                letter-spacing: 1px;
+            }
         }
     }
     &__copyright {
-        margin: 3% 0 0 7%;
-        width: 63%;
-        line-height: 15px;
+        @include mobile {
+            margin: 3% 0 0 7%;
+            width: 63%;
+            line-height: 15px;
+        }
+        @include tablet {
+            padding: 0.5% 0 0 3%;
+            font-size: $h4-desktab-fontsize;
+        }
+        @include desktop {
+            padding: 0.5% 0 0 12%;
+            font-size: $h4-desktab-fontsize;
+        }
     }
 }
 h1 {
-    font-size: $h1-mobile-fontsize;
+    @include mobile {
+        font-size: $h1-mobile-fontsize;
+    }
+
+    @include tablet {
+        font-size: $h1-desktab-fontsize;
+    }
+
+    @include desktop {
+        font-size: $h2-desktab-fontsize;
+    }
 }
 h2 {
-    font-size: $h2-mobile-fontsize;
+    @include mobile {
+        font-size: $h2-mobile-fontsize;
+    }
+
+    @include tablet {
+        font-size: $h2-desktab-fontsize;
+    }
+
+    @include desktop {
+        font-size: $h2-desktab-fontsize;
+    }
 }
 h3 {
-    font-size: $h3-mobile-fontsize;
+    @include mobile {
+        font-size: $h3-mobile-fontsize;
+    }
+
+    @include tablet {
+        font-size: $h3-desktab-fontsize;
+    }
+
+    @include desktop {
+        font-size: $h2-desktab-fontsize;
+    }
 }
 h4 {
-    font-size: $h4-mobile-fontsize;
+    @include mobile {
+        font-size: $h4-mobile-fontsize;
+    }
+
+    @include tablet {
+        font-size: $h4-desktab-fontsize;
+    }
+
+    @include desktop {
+        font-size: $h2-desktab-fontsize;
+    }
 }
