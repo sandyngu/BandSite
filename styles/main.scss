@@ -70,9 +70,19 @@ p {
 a {
     text-decoration: none;
     text-align: center;
+    color: white;
     
     @include mobile {
+        font-size: $p-mobile-fontsize;
         width: 50%;
+    }
+
+    &:hover {
+        color: #96f2f3;
+    }
+
+    &.footer__content:hover {
+        text-decoration: underline;
     }
 }
 .nav-bar {
@@ -129,6 +139,10 @@ a {
 
             &--active {
                 border-bottom: 5px solid white;
+            }
+
+            &:hover {
+                color: #96f2f3;
             }
         }
     }
@@ -325,6 +339,10 @@ a {
         @include desktop {
             width: 27.5%;
             margin: 1%;
+        }
+
+        &:hover {
+            filter: brightness(115%);
         }
     }
 }

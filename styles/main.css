@@ -115,12 +115,22 @@ body {
 a {
   text-decoration: none;
   text-align: center;
+  color: white;
 }
 
 @media screen and (min-width: 320px) and (max-width: 767px) {
   a {
+    font-size: 0.72rem;
     width: 50%;
   }
+}
+
+a:hover {
+  color: #96f2f3;
+}
+
+a.footer__content:hover {
+  text-decoration: underline;
 }
 
 .nav-bar {
@@ -214,6 +224,10 @@ a {
 
 .nav-bar__menu-link--active {
   border-bottom: 5px solid white;
+}
+
+.nav-bar__menu-link:hover {
+  color: #96f2f3;
 }
 
 /*Hero*/
@@ -504,6 +518,11 @@ a {
     width: 27.5%;
     margin: 1%;
   }
+}
+
+.sub-section__photo:hover {
+  -webkit-filter: brightness(115%);
+          filter: brightness(115%);
 }
 
 /*Get In Touch Section*/
