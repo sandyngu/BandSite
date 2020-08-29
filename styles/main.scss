@@ -5,6 +5,53 @@ body {
     font-family: 'Avenir';
     margin: 0;
 }
+
+/*Font Sizes*/
+
+h1 {
+    @include mobile {
+        font-size: $h1-mobile-fontsize;
+    }
+    @include tablet {
+        font-size: $h1-desktab-fontsize;
+    }
+    @include desktop {
+        font-size: $h1-desktab-fontsize;
+    }
+}
+h2 {
+    @include mobile {
+        font-size: $h2-mobile-fontsize;
+    }
+    @include tablet {
+        font-size: $h2-desktab-fontsize;
+    }
+    @include desktop {
+        font-size: $h2-desktab-fontsize;
+    }
+}
+h3 {
+    @include mobile {
+        font-size: $h3-mobile-fontsize;
+    }
+    @include tablet {
+        font-size: $h3-desktab-fontsize;
+    }
+    @include desktop {
+        font-size: 1.35rem;
+    }
+}
+h4 {
+    @include mobile {
+        font-size: $h4-mobile-fontsize;
+    }
+    @include tablet {
+        font-size: $h4-desktab-fontsize;
+    }
+    @include desktop {
+        font-size: $h4-desktab-fontsize;
+    }
+}
 p {
 
     @include mobile {
@@ -17,16 +64,19 @@ p {
         font-size: $h4-desktab-fontsize;
     }
 }
+
+/*Navigation Bar*/
+
 a {
     text-decoration: none;
+    text-align: center;
     
     @include mobile {
-        text-align: center;
         width: 50%;
     }
 }
 .nav-bar {
-    background-color: $primary-color;
+    background-color: $primary-background-color;
     display: flex;
     align-items: center;
 
@@ -83,9 +133,12 @@ a {
         }
     }
 }
+
+/*Hero*/
+
 .hero {
     align-items: center;
-    background-image: url('/assets/images/Hero-photo.jpg'), linear-gradient(rgba(0,0,0,0.2));;
+    background-image: url('/assets/images/Hero-photo.jpg'), linear-gradient(rgba(0,0,0,0.2));
     background-size: cover;
     background-position: bottom;
     background-repeat: no-repeat;
@@ -101,24 +154,27 @@ a {
     @include desktop {
         height: 90vh;
     }
+    
+    &__title {
+        color: white;
+        line-height: 130%;
+        align-items: center;
+    
+        @include mobile {
+            padding-left: 7%;
+        }
+        @include tablet {
+            padding-left: 3%;
+        }
+        @include desktop {
+            padding: 0 0 5% 10%;
+        }
+    }
 }
-.hero__title {
-    color: white;
-    line-height: 130%;
-    align-items: center;
 
-    @include mobile {
-        padding-left: 7%;
-    }
-    @include tablet {
-        padding-left: 3%;
-    }
-    @include desktop {
-        padding: 0 0 5% 10%;
-    }
-}
+/*About the Musicians Section*/
+
 .main-section {
-    display: block;
 
     &__title {
         @include mobile {
@@ -173,7 +229,6 @@ a {
         @include desktop {
             line-height: 32px;
             width: 90%;
-            letter-spacing: 1px;
         }
     }
     &__quote2 {
@@ -225,8 +280,11 @@ a {
         }
     }
 }
+
+/*Photo Gallery Section*/
+
 .sub-section {
-    background-color: $secondary-color;
+    background-color: $secondary-background-color;
 
     &__title {
 
@@ -270,8 +328,11 @@ a {
         }
     }
 }
+
+/*Get In Touch Section*/
+
 .footer {
-    background-color: $primary-color;
+    background-color: $primary-background-color;
     color: white;
     padding-bottom: 2%;
 
@@ -426,49 +487,5 @@ a {
         @include desktop {
             padding: 1.5% 0 0 10%;
         }
-    }
-}
-h1 {
-    @include mobile {
-        font-size: $h1-mobile-fontsize;
-    }
-    @include tablet {
-        font-size: $h1-desktab-fontsize;
-    }
-    @include desktop {
-        font-size: $h1-desktab-fontsize;
-    }
-}
-h2 {
-    @include mobile {
-        font-size: $h2-mobile-fontsize;
-    }
-    @include tablet {
-        font-size: $h2-desktab-fontsize;
-    }
-    @include desktop {
-        font-size: $h2-desktab-fontsize;
-    }
-}
-h3 {
-    @include mobile {
-        font-size: $h3-mobile-fontsize;
-    }
-    @include tablet {
-        font-size: $h3-desktab-fontsize;
-    }
-    @include desktop {
-        font-size: 1.35rem;
-    }
-}
-h4 {
-    @include mobile {
-        font-size: $h4-mobile-fontsize;
-    }
-    @include tablet {
-        font-size: $h4-desktab-fontsize;
-    }
-    @include desktop {
-        font-size: $h4-desktab-fontsize;
     }
 }

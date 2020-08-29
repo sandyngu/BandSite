@@ -20,6 +20,79 @@ body {
   margin: 0;
 }
 
+/*Font Sizes*/
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  h1 {
+    font-size: 4.5rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  h1 {
+    font-size: 4.5rem;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  h2 {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  h2 {
+    font-size: 2.25rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  h2 {
+    font-size: 2.25rem;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  h3 {
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  h3 {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  h3 {
+    font-size: 1.35rem;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  h4 {
+    font-size: 0.8rem;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  h4 {
+    font-size: 0.86rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  h4 {
+    font-size: 0.86rem;
+  }
+}
+
 @media screen and (min-width: 320px) and (max-width: 767px) {
   p {
     font-size: 0.72rem;
@@ -38,13 +111,14 @@ body {
   }
 }
 
+/*Navigation Bar*/
 a {
   text-decoration: none;
+  text-align: center;
 }
 
 @media screen and (min-width: 320px) and (max-width: 767px) {
   a {
-    text-align: center;
     width: 50%;
   }
 }
@@ -142,6 +216,7 @@ a {
   border-bottom: 5px solid white;
 }
 
+/*Hero*/
 .hero {
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -201,10 +276,7 @@ a {
   }
 }
 
-.main-section {
-  display: block;
-}
-
+/*About the Musicians Section*/
 @media screen and (min-width: 320px) and (max-width: 767px) {
   .main-section__title {
     padding: 2% 7% 0 7%;
@@ -283,7 +355,6 @@ a {
   .main-section__quote1 {
     line-height: 32px;
     width: 90%;
-    letter-spacing: 1px;
   }
 }
 
@@ -366,6 +437,7 @@ a {
   }
 }
 
+/*Photo Gallery Section*/
 .sub-section {
   background-color: #FAFAFA;
 }
@@ -434,6 +506,7 @@ a {
   }
 }
 
+/*Get In Touch Section*/
 .footer {
   background-color: #323232;
   color: white;
@@ -680,78 +753,6 @@ a {
 @media screen and (min-width: 1200px) {
   .footer__copyright {
     padding: 1.5% 0 0 10%;
-  }
-}
-
-@media screen and (min-width: 320px) and (max-width: 767px) {
-  h1 {
-    font-size: 1.5rem;
-  }
-}
-
-@media screen and (min-width: 768px) and (max-width: 1199px) {
-  h1 {
-    font-size: 4.5rem;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  h1 {
-    font-size: 4.5rem;
-  }
-}
-
-@media screen and (min-width: 320px) and (max-width: 767px) {
-  h2 {
-    font-size: 1.5rem;
-  }
-}
-
-@media screen and (min-width: 768px) and (max-width: 1199px) {
-  h2 {
-    font-size: 2.25rem;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  h2 {
-    font-size: 2.25rem;
-  }
-}
-
-@media screen and (min-width: 320px) and (max-width: 767px) {
-  h3 {
-    font-size: 0.9rem;
-  }
-}
-
-@media screen and (min-width: 768px) and (max-width: 1199px) {
-  h3 {
-    font-size: 1.5rem;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  h3 {
-    font-size: 1.35rem;
-  }
-}
-
-@media screen and (min-width: 320px) and (max-width: 767px) {
-  h4 {
-    font-size: 0.8rem;
-  }
-}
-
-@media screen and (min-width: 768px) and (max-width: 1199px) {
-  h4 {
-    font-size: 0.86rem;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  h4 {
-    font-size: 0.86rem;
   }
 }
 /*# sourceMappingURL=main.css.map */
