@@ -61,7 +61,7 @@ a {
 
             @include mobile {
                 font-size: $h3-mobile-fontsize;
-                padding: 8% 0;
+                padding: 6% 0;
             }
             @include tablet {
                 display: inline-flex;
@@ -81,7 +81,7 @@ a {
             }
 
             &--active {
-                border-bottom: 4px solid white;
+                border-bottom: 5px solid white;
             }
         }
     }
@@ -99,19 +99,19 @@ a {
     display: flex;
 
     @include mobile {
-        height: 33vh;
+        height: 30vh;
     }
     @include tablet {
-        height: 75vh;
+        height: 80vh;
     }
     @include desktop {
-        height: 75vh;
+        height: 110vh;
     }
 }
 .hero__title {
     color: white;
     margin: 0;
-    line-height: 140%;
+    line-height: 135%;
     align-items: center;
 
     @include mobile {
@@ -156,11 +156,11 @@ a {
     &__container1 {
 
         @include mobile {
-            padding: 1% 15% 0 7%;
+            padding: 1% 0% 0 7%;
             width: 80%;
         }
         @include tablet {
-            padding: 1% 15% 0 3%;
+            padding: 1% 0% 0 3%;
             width: 90%;
         }
         @include desktop {
@@ -248,26 +248,31 @@ a {
         flex-wrap: wrap;
         justify-content: center;
         margin: 2% 4% 0 4%;
-        padding-bottom: 3%;
+        padding: 0 0 2.5% 0;
 
+        @include mobile {
+            padding: 0 0 8% 0;
+        }
         @include tablet {
             margin: 0;
-            padding-left: 1%;
+        }
+        @include tablet {
+            margin: 0;
         }
     }
     &__photo {
 
         @include mobile {
-            width: 92%;
-            margin: 4%;
+            width: 95%;
+            margin: 2.75%;
         }
         @include tablet {
             width: 30%;
-            margin: 1.25%;
+            margin: 1.3%;
         }
         @include desktop {
-            width: 27%;
-            margin: 1.25%;
+            width: 27.5%;
+            margin: 0.9%;
         }
     }
 }
@@ -296,7 +301,7 @@ a {
 
             @include mobile {
                 min-width: 100px;
-                padding: 5% 2% 5% 7%;
+                padding: 5% 2% 5% 4%;
             }
             @include tablet {
                 min-width: 250px;
@@ -310,10 +315,11 @@ a {
             }
         }
         &-logo-container {
+            padding: 0;
 
             @include mobile {
-                width: 100%;
-                padding-left: 7%;
+                width: 50%;
+                padding-left: 4%;
             }
             @include tablet {
                 display: inline-flex;
@@ -374,8 +380,8 @@ a {
     &__container {
 
         @include mobile {
-            padding: 0 7%;
-            width: 100%;
+            padding: 0 4%;
+            width: 92%;
         }
         @include tablet {
             display: flex;
@@ -391,7 +397,7 @@ a {
         }
     }
     &__content {
-        width: 100%;
+
         @include mobile {
             margin: 7% 0;
             line-height: 17px;
@@ -430,10 +436,12 @@ a {
         }
     }
     &__copyright {
+
         @include mobile {
-            margin: 3% 0 0 7%;
-            width: 63%;
+            margin: 3% 0 0 4%;
+            width: 60%;
             line-height: 15px;
+            padding-bottom: 7%;
         }
         @include tablet {
             padding: 1.5% 0 0 3%;
