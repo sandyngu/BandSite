@@ -183,7 +183,7 @@ a {
         height: 70vh;
     }
     @include desktop {
-        height: 90vh;
+        height: 100vh;
     }
     
     &__title {
@@ -198,7 +198,7 @@ a {
             padding-left: 3%;
         }
         @include desktop {
-            padding: 0 0 5% 10%;
+            padding: 0 0 4% 10%;
         }
     }
 }
