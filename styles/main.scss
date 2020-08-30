@@ -13,7 +13,7 @@ h1 {
         font-size: $h1-mobile-fontsize;
     }
     @include tablet {
-        font-size: $h1-desktab-fontsize;
+        font-size: $hero-desktab-fontsize;
     }
     @include desktop {
         font-size: $h1-desktab-fontsize;
@@ -38,7 +38,7 @@ h3 {
         font-size: $h3-desktab-fontsize;
     }
     @include desktop {
-        font-size: 1.35rem;
+        font-size: $h3-desktab-fontsize;
     }
 }
 h4 {
@@ -78,11 +78,7 @@ a {
     }
 
     &:hover {
-        color: #96f2f3;
-    }
-
-    &.footer__content:hover {
-        text-decoration: underline;
+        color: $accent-color;
     }
 }
 .nav-bar {
@@ -139,10 +135,14 @@ a {
 
             &--active {
                 border-bottom: 5px solid white;
+
+                &:hover {
+                    border-bottom: 5px solid $accent-color;
+                }
             }
 
             &:hover {
-                color: #96f2f3;
+                color: $accent-color;
             }
         }
     }
@@ -163,7 +163,7 @@ a {
         height: 30vh;
     }
     @include tablet {
-        height: 80vh;
+        height: 70vh;
     }
     @include desktop {
         height: 90vh;
@@ -219,7 +219,7 @@ a {
 
         @include mobile {
             padding: 1% 0% 0 7%;
-            width: 80%;
+            width: 83%;
         }
         @include tablet {
             padding: 1% 0% 0 3%;
@@ -232,8 +232,9 @@ a {
     &__quote1 {
 
         @include mobile {
-            line-height: 20px;
+            line-height: 22px;
             font-weight: 600;
+            letter-spacing: 0.3px;
         }
 
         @include tablet {
@@ -242,7 +243,7 @@ a {
 
         @include desktop {
             line-height: 32px;
-            width: 90%;
+            width: 95%;
         }
     }
     &__quote2 {
@@ -256,7 +257,7 @@ a {
             padding: 2% 0;
         }
         @include desktop {
-            font-size: $p-desktab-fontsize;
+            font-size: $h4-desktab-fontsize;
             padding: 2% 0;
         }
     }
@@ -306,7 +307,7 @@ a {
             padding: 10% 0 0 7%;
         }
         @include tablet {
-            padding: 5% 0 0 3%;
+            padding: 6% 0 0 3%;
         }
         @include desktop {
             padding: 5% 0 0 10%;

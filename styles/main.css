@@ -29,13 +29,13 @@ body {
 
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   h1 {
-    font-size: 4.5rem;
+    font-size: 3.75rem;
   }
 }
 
 @media screen and (min-width: 1200px) {
   h1 {
-    font-size: 4.5rem;
+    font-size: 3.5rem;
   }
 }
 
@@ -59,19 +59,19 @@ body {
 
 @media screen and (min-width: 320px) and (max-width: 767px) {
   h3 {
-    font-size: 0.9rem;
+    font-size: 0.91rem;
   }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   h3 {
-    font-size: 1.5rem;
+    font-size: 1.45rem;
   }
 }
 
 @media screen and (min-width: 1200px) {
   h3 {
-    font-size: 1.35rem;
+    font-size: 1.45rem;
   }
 }
 
@@ -126,11 +126,7 @@ a {
 }
 
 a:hover {
-  color: #96f2f3;
-}
-
-a.footer__content:hover {
-  text-decoration: underline;
+  color: #96F2F3;
 }
 
 .nav-bar {
@@ -195,7 +191,7 @@ a.footer__content:hover {
 
 @media screen and (min-width: 320px) and (max-width: 767px) {
   .nav-bar__menu-link {
-    font-size: 0.9rem;
+    font-size: 0.91rem;
     padding: 6% 0;
   }
 }
@@ -226,8 +222,12 @@ a.footer__content:hover {
   border-bottom: 5px solid white;
 }
 
+.nav-bar__menu-link--active:hover {
+  border-bottom: 5px solid #96F2F3;
+}
+
 .nav-bar__menu-link:hover {
-  color: #96f2f3;
+  color: #96F2F3;
 }
 
 /*Hero*/
@@ -254,7 +254,7 @@ a.footer__content:hover {
 
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .hero {
-    height: 80vh;
+    height: 70vh;
   }
 }
 
@@ -335,7 +335,7 @@ a.footer__content:hover {
 @media screen and (min-width: 320px) and (max-width: 767px) {
   .main-section__container1 {
     padding: 1% 0% 0 7%;
-    width: 80%;
+    width: 83%;
   }
 }
 
@@ -354,8 +354,9 @@ a.footer__content:hover {
 
 @media screen and (min-width: 320px) and (max-width: 767px) {
   .main-section__quote1 {
-    line-height: 20px;
+    line-height: 22px;
     font-weight: 600;
+    letter-spacing: 0.3px;
   }
 }
 
@@ -368,7 +369,7 @@ a.footer__content:hover {
 @media screen and (min-width: 1200px) {
   .main-section__quote1 {
     line-height: 32px;
-    width: 90%;
+    width: 95%;
   }
 }
 
@@ -391,7 +392,7 @@ a.footer__content:hover {
 
 @media screen and (min-width: 1200px) {
   .main-section__quote2 {
-    font-size: 0.75rem;
+    font-size: 0.86rem;
     padding: 2% 0;
   }
 }
@@ -464,7 +465,7 @@ a.footer__content:hover {
 
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .sub-section__title {
-    padding: 5% 0 0 3%;
+    padding: 6% 0 0 3%;
   }
 }
 
