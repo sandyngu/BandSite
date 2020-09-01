@@ -567,14 +567,137 @@ a:hover {
 }
 
 /*Comments Section*/
+input {
+  font-family: 'Avenir';
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  input {
+    font-size: 0.72rem;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  input {
+    font-size: 0.75rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  input {
+    font-size: 0.75rem;
+  }
+}
+
+.comments-section__photo {
+  background-image: url("/assets/images/Mohan-muruge.jpg");
+  background-size: cover;
+  background-position: 50% 50%;
+  height: 15vw;
+  width: 8.5vh;
+  border-radius: 50%;
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .comments-section__title {
+    padding: 3% 0 0 6%;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .comments-section__title {
+    padding: 2% 0 0 3%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .comments-section__title {
+    padding: 5% 0 0 10%;
+  }
+}
+
 .comments-section__container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 auto;
 }
 
-.comments-section__name {
-  color: grey;
+.comments-section__form-input {
+  background-color: #FAFAFA;
+  border: 1.5px solid #E1E1E1;
+  outline: none;
+  border-radius: 3%;
+}
+
+.comments-section__form-title {
+  color: #AFAFAF;
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .comments-section__form-name {
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .comments-section__form-name {
+    width: 50%;
+    height: 8vh;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .comments-section__form-name {
+    width: 20%;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .comments-section__form-comment {
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .comments-section__form-comment {
+    width: 50%;
+    height: 20vh;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .comments-section__form-comment {
+    width: 20%;
+  }
+}
+
+.comments-section__button {
+  background-color: #323232;
+  color: white;
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .comments-section__button {
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .comments-section__button {
+    width: 20%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .comments-section__button {
+    width: 20%;
+  }
 }
 
 /*Get In Touch Section*/

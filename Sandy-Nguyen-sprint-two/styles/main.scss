@@ -346,13 +346,98 @@ a {
 
 /*Comments Section*/
 
+input {
+    font-family:'Avenir';
+
+    @include mobile {
+        font-size: $p-mobile-fontsize;
+    }
+    @include tablet {
+        font-size: $p-desktab-fontsize;
+    }
+    @include desktop {
+        font-size: $p-desktab-fontsize;
+    }
+}
 .comments-section {
+
+    &__photo {
+        background-image: url('/assets/images/Mohan-muruge.jpg');
+        background-size: cover;
+        background-position: 50% 50%;
+        height: 15vw;
+        width: 8.5vh;
+        border-radius: 50%;
+    }
+
+    &__title {
+        @include mobile {
+            padding: 3% 0 0 6%;
+        }
+        @include tablet {
+            padding: 2% 0 0 3%;
+        }
+        @include desktop {
+            padding: 5% 0 0 10%;
+        }
+    }
 
     &__container {
         display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 0 auto;
     }
-    &__name {
-        color: grey;
+    &__form {
+    
+        &-input {
+        background-color: $comments-box-color;
+        border: 1.5px solid #E1E1E1;
+        outline: none;
+        border-radius: 3%;
+        }
+        
+        &-title {
+            color: $comments-title-color;
+        }
+        &-name {
+            @include mobile {
+                width: 50%;
+            }
+            @include tablet {
+                width: 50%;
+                height: 8vh;
+            }
+            @include desktop {
+                width: 20%;
+            }
+        }
+        &-comment {
+            @include mobile {
+                width: 50%;
+            }
+            @include tablet {
+                width: 50%;
+                height: 20vh;
+            }
+            @include desktop {
+                width: 20%;
+            }
+        }
+}
+    &__button {
+        background-color: $primary-background-color;
+        color: white;
+
+        @include mobile {
+            width: 50%;
+        }
+        @include tablet {
+            width: 20%;
+        }
+        @include desktop {
+            width: 20%;
+        }
     }
 }
 
