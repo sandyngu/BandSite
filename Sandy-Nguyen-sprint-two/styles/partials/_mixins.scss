@@ -1,0 +1,40 @@
+@import 'variables';
+
+@mixin mobile {
+    @media screen and (min-width: $mobile-breakpoint) 
+    and (max-width: 767px) {
+        @content;
+    }
+}
+@mixin tablet {
+    @media screen and (min-width: $tablet-breakpoint) 
+    and (max-width: 1199px) {
+        @content;
+    }
+}
+@mixin desktop {
+    @media screen and (min-width: $desktop-breakpoint) {
+        @content;
+    }
+}
+
+@keyframes forfun {
+    0% { 
+        color: rgb(250, 136, 136);
+    }
+    20% { 
+        color: rgb(252, 208, 126);
+    }
+    40% { 
+        color: rgb(250, 250, 120);
+    }
+    60% { 
+        color: rgb(156, 250, 156);
+    }
+    80% { 
+        color: rgb(125, 169, 252);
+    }
+    100% { 
+        color: rgb(252, 150, 230); 
+    }
+  }
