@@ -71,7 +71,7 @@ body {
 
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   h1 {
-    font-size: 2.2rem;
+    font-size: 3.75rem;
   }
 }
 
@@ -246,7 +246,7 @@ a:hover {
     display: inline-flex;
     font-size: 0.86rem;
     margin: 35px 15px 0 55px;
-    padding: 0 6% 17% 6%;
+    padding: 0 10% 17% 10%;
   }
 }
 
@@ -257,7 +257,7 @@ a:hover {
     display: inline-flex;
     font-size: 0.86rem;
     margin: 35px 0 0 70px;
-    padding: 0 6% 17% 6%;
+    padding: 0 10% 17% 10%;
   }
 }
 
@@ -291,7 +291,7 @@ a:hover {
 
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .hero {
-    height: 70vh;
+    height: 125vh;
   }
 }
 
@@ -315,7 +315,7 @@ a:hover {
 
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .hero__album {
-    padding-left: 3%;
+    padding: 13% 0 3% 3%;
   }
 }
 
@@ -336,7 +336,7 @@ a:hover {
 
 @media screen and (min-width: 320px) and (max-width: 767px) {
   .hero__title {
-    font-size: 2.2rem;
+    font-size: 2.1rem;
     padding: 5% 0 15% 6%;
     letter-spacing: 0.5px;
   }
@@ -344,6 +344,8 @@ a:hover {
 
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .hero__title {
+    font-size: 3.75rem;
+    width: 75%;
     padding-left: 3%;
   }
 }
@@ -356,9 +358,9 @@ a:hover {
 
 .hero__music-player {
   margin: 0 auto;
-  width: 90%;
-  height: 18vh;
-  padding: 0 5%;
+  width: 65%;
+  height: 27vh;
+  padding: 5% 3%;
 }
 
 @media screen and (min-width: 320px) and (max-width: 767px) {
