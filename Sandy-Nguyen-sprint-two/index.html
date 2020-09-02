@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="styles/main.css">
+    <link rel="stylesheet" type="text/css" href="/styles/main.css">
     <title>BandSite</title>
 </head>
 <body>
     <header class="nav">
         <nav class="nav-bar">
             <a href="index.html" class="nav-bar__main-logo">
-                <img src="assets/logo/Logo-bandsite.svg" alt="BANDSITE Logo" class="nav-bar__main-logo">
+                <img src="/assets/logo/Logo-bandsite.svg" alt="BANDSITE Logo" class="nav-bar__main-logo">
             </a>
             <ul class="nav-bar__menu">
                 <a href="index.html"><li class="nav-bar__menu-link nav-bar__menu-link--active">Biography</li></a>
@@ -50,15 +50,17 @@
     </section>
     <section class="comments-section">
         <h2 class="comments-section__title">Join the Conversation</h2>
-        <div class="comments-section__photo"></div>
         <div class="comments-section__container">
+            <div class="comments-section__photo"></div>
             <form class="comments-section__form">
-                <h4 class="comments-section__form-title">NAME</h4>
+                <h3 class="comments-section__form-title">NAME</h4>
                 <input type="text" class="comments-section__form-input comments-section__form-name"><br>
-                <h4 class="comments-section__form-title">COMMENT</h4>
-                <input type="text" class="comments-section__form-input comments-section__form-comment" value="Add a new Comment">
-                <button class="comments-section__button">COMMENT</button>
+                <h3 class="comments-section__form-title">COMMENT</h4>
+                <input type="text" class="comments-section__form-input comments-section__form-comment" value="Add a new comment">
             </form>
+            <a href="#" class="comments-section__button">
+                <button class="comments-section__button">COMMENT</button>
+            </a>
         </div>
     </section>
     <footer class="footer">
