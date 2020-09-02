@@ -117,18 +117,15 @@ a {
             list-style-type: none;
 
             @include mobile {
-                font-size: $h3-mobile-fontsize;
                 padding: 6% 0;
             }        
             @include tablet {
                 display: inline-flex;
-                font-size: $h4-desktab-fontsize;
                 margin: 35px 15px 0 55px;
                 padding: 0 10% 17% 10%;
             }
             @include desktop {
                 display: inline-flex;
-                font-size: $h4-desktab-fontsize;
                 margin: 35px 0 0 70px;
                 padding: 0 10% 17% 10%;
             }

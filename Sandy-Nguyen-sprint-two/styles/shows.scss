@@ -10,7 +10,7 @@ body {
 
 h1 {
     @include mobile {
-        font-size: $h1-mobile-fontsize;
+        font-size: $hero-mobile-fontsize;
     }
     @include tablet {
         font-size: $hero-desktab-fontsize;
@@ -155,13 +155,13 @@ a {
     background-blend-mode: overlay;
 
     @include mobile {
-        height: 90vh;
+        height: 78vh;
     }
     @include tablet {
         height: 125vh;
     }
     @include desktop {
-        height: 100vh;
+        height: 130vh;
     }
 
     &__album {
@@ -176,36 +176,54 @@ a {
             padding: 13% 0 3% 3%;
         }
         @include desktop {
-            padding: 0 0 4% 10%;
+            padding: 13% 0 3% 11%;
         }
+    }
+    &__flex {
+        display: flex;
     }
     
     &__title {
         color: white;
-        line-height: 140%;
+        line-height: 135%;
         align-items: center;
         margin: 0;
     
         @include mobile {
+            width: 78%;
             font-size: $hero-mobile-fontsize;
-            padding: 5% 0 15% 6%;
-            letter-spacing: 0.5px;
+            padding: 5% 0 10% 6%;
+            letter-spacing: 1.2px;
         }
         @include tablet {
-            font-size: $hero-desktab-fontsize;
             width: 75%;
             padding-left: 3%;
         }
         @include desktop {
-            padding: 0 0 4% 10%;
+            width: 35%;
+            padding: 0 0 4% 11%;
         }
     }
 
     &__music-player {
         margin: 0 auto;
-        width: 65%; 
-        height: 27vh; 
-        padding: 5% 3%;
+
+        @include mobile {
+            width: 90%; 
+            height: 18vh; 
+            padding: 5%;
+        }
+        @include tablet {
+            width: 65%; 
+            height: 27vh; 
+            padding: 5% 3%;
+        }
+        @include desktop {
+            width: 27%;
+            height: 19vh;
+            padding: 0 0 4% 11%;
+        }
+        
     }
 }
 
