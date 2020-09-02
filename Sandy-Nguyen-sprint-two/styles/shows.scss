@@ -155,13 +155,13 @@ a {
     background-blend-mode: overlay;
 
     @include mobile {
-        height: 78vh;
+        height: 460px; /*78vh*/
     }
     @include tablet {
-        height: 125vh;
+        height: 680px; /*125vh*/
     }
     @include desktop {
-        height: 130vh;
+        height: 600px; /*130vh*/
     }
 
     &__album {
@@ -180,7 +180,10 @@ a {
         }
     }
     &__flex {
-        display: flex;
+        @include desktop {
+            display: flex;
+            align-items: flex-end;
+        }
     }
     
     &__title {
@@ -201,7 +204,8 @@ a {
         }
         @include desktop {
             width: 35%;
-            padding: 0 0 4% 11%;
+            padding: 0 0 2.5% 11%;
+            letter-spacing: 1px;
         }
     }
 
@@ -210,18 +214,18 @@ a {
 
         @include mobile {
             width: 90%; 
-            height: 18vh; 
+            height: 110px; 
             padding: 5%;
         }
         @include tablet {
-            width: 65%; 
-            height: 27vh; 
+            width: 55%; 
+            height: 130px; 
             padding: 5% 3%;
         }
         @include desktop {
-            width: 27%;
-            height: 19vh;
-            padding: 0 0 4% 11%;
+            width: 29%;
+            height: 110px;
+            padding: 0 10% 4% 0%;
         }
         
     }

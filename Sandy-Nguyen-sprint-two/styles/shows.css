@@ -285,19 +285,22 @@ a:hover {
 
 @media screen and (min-width: 320px) and (max-width: 767px) {
   .hero {
-    height: 78vh;
+    height: 460px;
+    /*78vh*/
   }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .hero {
-    height: 125vh;
+    height: 680px;
+    /*125vh*/
   }
 }
 
 @media screen and (min-width: 1200px) {
   .hero {
-    height: 130vh;
+    height: 600px;
+    /*130vh*/
   }
 }
 
@@ -325,10 +328,15 @@ a:hover {
   }
 }
 
-.hero__flex {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+@media screen and (min-width: 1200px) {
+  .hero__flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
 }
 
 .hero__title {
@@ -359,7 +367,8 @@ a:hover {
 @media screen and (min-width: 1200px) {
   .hero__title {
     width: 35%;
-    padding: 0 0 4% 11%;
+    padding: 0 0 2.5% 11%;
+    letter-spacing: 1px;
   }
 }
 
@@ -370,24 +379,24 @@ a:hover {
 @media screen and (min-width: 320px) and (max-width: 767px) {
   .hero__music-player {
     width: 90%;
-    height: 18vh;
+    height: 110px;
     padding: 5%;
   }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .hero__music-player {
-    width: 65%;
-    height: 27vh;
+    width: 55%;
+    height: 130px;
     padding: 5% 3%;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .hero__music-player {
-    width: 27%;
-    height: 19vh;
-    padding: 0 0 4% 11%;
+    width: 29%;
+    height: 110px;
+    padding: 0 10% 4% 0%;
   }
 }
 
