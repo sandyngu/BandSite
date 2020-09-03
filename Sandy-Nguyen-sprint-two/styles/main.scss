@@ -423,7 +423,6 @@ input {
             border: 1.5px solid #E1E1E1;
             outline: none;
             border-radius: 3%;
-            font-family: 'Avenir';
 
             @include mobile {
                 margin-bottom: 8%;
@@ -451,6 +450,8 @@ input {
                 }
             }
             &-comment {
+                resize: none;
+                font-family: 'Avenir';
 
                 @include mobile {
                     width: 87%;
@@ -494,9 +495,9 @@ input {
         
         @include mobile {
             font-size: $h3-mobile-fontsize;
-            width: 99%;
+            width: 98%;
             margin: 0 1% 8% 1%;
-            padding: 5.5% 4.3%;
+            padding: 6% 4.3%;
             
         }     
         @include tablet {
@@ -684,18 +685,18 @@ input {
     &-entry {
         display: flex;
         flex-wrap: wrap;
-        padding: 5%;
+        margin: 2% 5% 2% 0;
         justify-content: space-between;
     }
     &-photo {
-        background-color: $circle-date-color;
-        background-position: 20% 50%;
+        background-color: $circle-divider-color;
         height: 40px;
         width: 40px;
         border-radius: 50%;
         
         @include mobile {
-            margin: 4%;
+            margin: 5% 3.3%;
+            width: 70%;
         }
         @include tablet {
             margin: 2.5% 3%;
@@ -705,24 +706,27 @@ input {
         }
     }
     &-divider {
-        border-bottom: 2px solid $divider-color;
-        width: 290px;
+        border-bottom: 2px solid $circle-divider-color;
+        width: 90%;
         margin-left: 5%;
     }
     &-container {
         margin: 4% auto;
+        display: flex;
     }
     &-name {
         display: inline-flex;
         font-weight: 600;
-        margin: 6% 0;
+        margin: 6% 0 0 0;
     }
     &-date {
         display: inline-flex;
-        margin: 6% 0;
-        color: $circle-date-color;
+        margin: 6% 0 0 0;
+        color: $date-color;
     }
     &-text {
-        margin: 4%;
+        margin: 4% 0 0 0;
+        display: inline-flex;
+        width: 100%;
     }
 }
