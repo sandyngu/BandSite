@@ -8,7 +8,7 @@ body {
 
 .button {
     background-color: $primary-background-color;
-    border-radius: 4%;
+    border-radius: 3.5%;
     border: none;
 }
 
@@ -367,6 +367,14 @@ input {
     }
 }
 .comments-section {
+    padding-bottom: 11%;
+
+    @include tablet {
+        padding-bottom: 5%;
+    }
+    @include desktop {
+        padding-bottom: 3%;
+    }
 
     &__photo {
         background-image: url('/assets/images/Mohan-muruge.jpg');
@@ -422,7 +430,7 @@ input {
             background-color: $comments-box-color;
             border: 1.5px solid #E1E1E1;
             outline: none;
-            border-radius: 3%;
+            border-radius: 3.5%;
 
             @include mobile {
                 margin-bottom: 8%;
@@ -435,14 +443,15 @@ input {
             }
 
             &-name {
+                border: 2px solid $primary-background-color;
             
                 @include mobile {
-                    width: 87%;
-                    padding: 5%;
+                    width: 84.5%;
+                    padding: 6%;
                 }
                 @include tablet {
-                    width: 83%;
-                    padding: 2%;
+                    width: 82%;
+                    padding: 3%;
                 }
                 @include desktop {
                     width: 52%;
@@ -454,18 +463,18 @@ input {
                 font-family: 'Avenir';
 
                 @include mobile {
-                    width: 87%;
+                    width: 85%;
                     height: 13vh;
-                    padding: 5%;
+                    padding: 6%;
                 }
                 @include tablet {
-                    width: 83%;
-                    height: 13vh;
-                    padding: 2%;
+                    width: 82%;
+                    height: 11vh;
+                    padding: 3%;
                 }
                 @include desktop {
                     width: 52%;
-                    height: 10vh;
+                    height: 9vh;
                     padding: 2%;
                 }
             }
@@ -496,15 +505,15 @@ input {
         @include mobile {
             font-size: $h3-mobile-fontsize;
             width: 98%;
-            margin: 0 1% 8% 1%;
-            padding: 6% 4.3%;
+            margin: 0 1% 15% 1%;
+            padding: 7% 4.3%;
             
         }     
         @include tablet {
             font-size: $p-desktab-fontsize;
             width: 30%;
-            margin: 0 12% 2.5% 1%;
-            padding: 3% 1.2%;
+            margin: 0 12% 5% 1%;
+            padding: 3.5% 1.5%;
         }
         @include desktop {
             font-size: $h4-desktab-fontsize;
@@ -514,6 +523,122 @@ input {
         }
     }
 }
+
+/*Comments Section JavaScript*/
+
+.comments-section__guestbook {
+    margin: 0 auto;
+    
+    @include mobile {
+        font-size: $h3-mobile-fontsize;
+    }
+    @include tablet {
+        width: 72%;
+        margin-left: 15%;
+    }
+    @include desktop {
+        width: 46%;
+        margin-left: 28%;
+    }
+    
+    &-entry {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 2% 5% 2% 0;
+        
+        @include mobile {
+            justify-content: space-between;
+        }
+        @include tablet {
+            margin: 2% 5% 0 0;
+        }
+        @include desktop {
+            margin: 2% 5% 0 0;
+        }
+    }
+    &-photo {
+        background-color: $circle-divider-color;
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+        
+        @include mobile {
+            margin: 5% 3.3%;
+            width: 67%;
+        }
+        @include tablet {
+            margin: 1.5% 3%;
+            width: 19%;
+        }
+        @include desktop {
+            margin: 2.8% 2%;
+            width: 20%;
+        }
+    }
+    &-divider {
+        border-bottom: 2px solid $circle-divider-color;
+        width: 90%;
+        margin-left: 5%;
+        justify-content: center;
+
+    }
+    &-container {
+        margin: 4% auto;
+        display: flex;
+
+        @include tablet {
+            margin: 2% auto;
+        }
+        @include desktop {
+            margin: 2% auto;
+        }
+    }
+    &-name {
+        display: inline-flex;
+        font-weight: 600;
+        margin: 6% 0 0 0;
+        letter-spacing: 0.75px;
+
+        @include tablet {
+            margin: 0 2% 0 0;
+        }
+        @include desktop {
+            margin: 0 2% 0 0;
+        }
+    }
+    &-date {
+        display: inline-flex;
+        margin: 6% 0 0 0;
+        color: $date-color;
+
+        @include tablet {
+            margin: 0;
+            font-size: $h4-desktab-fontsize;
+        }
+        @include desktop {
+            margin: 0;
+            font-size: $h4-desktab-fontsize;
+        }
+    }
+    &-text {
+        margin-top: 4%;
+        display: inline-flex;
+        width: 99.5%;
+        line-height: 150%;
+
+        @include tablet {
+            font-size: $h4-desktab-fontsize;
+            margin-top: 2%;
+            width: 100%;
+        }
+        @include desktop {
+            font-size: $h4-desktab-fontsize;
+            margin-top: 2%;
+            width: 100%;
+        }
+    }
+}
+
 /*Get In Touch Section*/
 
 .footer {
@@ -671,100 +796,6 @@ input {
         }
         @include desktop {
             padding: 1.5% 0 0 10%;
-        }
-    }
-}
-
-/*Comments Section JavaScript*/
-
-.comments-section__guestbook {
-    margin: 0 auto;
-    
-    @include mobile {
-        font-size: $h3-mobile-fontsize;
-    }
-    @include tablet {
-        width: 72.5%;
-    }
-    
-    &-entry {
-        display: flex;
-        flex-wrap: wrap;
-        margin: 2% 5% 2% 0;
-        
-        @include mobile {
-            justify-content: space-between;
-        }
-        @include tablet {
-            margin: 2% 5% 0 0;
-        }
-    }
-    &-photo {
-        background-color: $circle-divider-color;
-        height: 40px;
-        width: 40px;
-        border-radius: 50%;
-        
-        @include mobile {
-            margin: 5% 3.3%;
-            width: 67%;
-        }
-        @include tablet {
-            margin: 1.5% 3%;
-            width: 19%;
-        }
-        @include desktop {
-            margin: 2.8% 2%;
-        }
-    }
-    &-divider {
-        border-bottom: 2px solid $circle-divider-color;
-        width: 90%;
-        margin-left: 5%;
-        justify-content: center;
-
-    }
-    &-container {
-        margin: 4% auto;
-        display: flex;
-
-        @include tablet {
-            margin: 2% auto;
-        }
-    }
-    &-name {
-        display: inline-flex;
-        font-weight: 600;
-        margin: 6% 0 0 0;
-        
-        @include tablet {
-            margin: 0;
-        }
-
-        @include tablet {
-            font-size: $h4-desktab-fontsize;
-            margin-right: 2%;
-        }
-    }
-    &-date {
-        display: inline-flex;
-        margin: 6% 0 0 0;
-        color: $date-color;
-
-        @include tablet {
-            margin: 0;
-            font-size: $h4-desktab-fontsize;
-        }
-    }
-    &-text {
-        margin: 4% 0 0 0;
-        display: inline-flex;
-        width: 100%;
-
-        @include tablet {
-            font-size: $h4-desktab-fontsize;
-            line-height: 150%;
-            margin-top: 2%;
         }
     }
 }
