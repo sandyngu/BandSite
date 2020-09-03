@@ -415,16 +415,7 @@ input {
     }
     &__form {
         height: 100%;
-
-        @include mobile {
-            width: 70%;
-        }
-        @include tablet {
-            width: 70%;
-        }
-        @include desktop {
-            width: 70%;
-        }
+        width: 70%;
         
         &-input {
             background-color: $comments-box-color;
@@ -443,20 +434,18 @@ input {
             }
 
             &-name {
+                height: 3vh;
             
                 @include mobile {
                     width: 87%;
-                    height: 3vh;
                     padding: 5%;
                 }
                 @include tablet {
                     width: 83%;
-                    height: 3vh;
                     padding: 2%;
                 }
                 @include desktop {
                     width: 52%;
-                    height: 3vh;
                     padding: 2%;
                 }
             }
@@ -498,33 +487,28 @@ input {
         }
     }
     &__button-comment {
+        font-weight: 600;
+        height: 3vh;
+        letter-spacing: 0.5px;
         
         @include mobile {
             font-size: $h3-mobile-fontsize;
-            font-weight: 600;
             width: 60%;
-            height: 2.5vh;
             margin: 0 1% 8% 1%;
             padding: 6% 4.3%;
-            letter-spacing: 0.75px;
+            
         }     
         @include tablet {
             font-size: $p-desktab-fontsize;
-            font-weight: 600;
             width: 20%;
-            height: 2.5vh;
             margin: 0 8.5% 3% 1%;
-            padding: 2% 1%;
-            letter-spacing: 0.5px;
+            padding: 2.5% 1%;
         }
         @include desktop {
             font-size: $h4-desktab-fontsize;
-            font-weight: 600;
             width: 13%;
-            height: 2.5vh;
             margin: 0 30.5% 3% 1%;
             padding: 1.75% 1%;
-            letter-spacing: 0.5px;
         }
     }
 }
