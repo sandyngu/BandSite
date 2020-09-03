@@ -678,15 +678,26 @@ input {
 /*Comments Section JavaScript*/
 
 .comments-section__guestbook {
+    margin: 0 auto;
+    
     @include mobile {
         font-size: $h3-mobile-fontsize;
+    }
+    @include tablet {
+        width: 72.5%;
     }
     
     &-entry {
         display: flex;
         flex-wrap: wrap;
         margin: 2% 5% 2% 0;
-        justify-content: space-between;
+        
+        @include mobile {
+            justify-content: space-between;
+        }
+        @include tablet {
+            margin: 2% 5% 0 0;
+        }
     }
     &-photo {
         background-color: $circle-divider-color;
@@ -696,10 +707,11 @@ input {
         
         @include mobile {
             margin: 5% 3.3%;
-            width: 70%;
+            width: 67%;
         }
         @include tablet {
-            margin: 2.5% 3%;
+            margin: 1.5% 3%;
+            width: 19%;
         }
         @include desktop {
             margin: 2.8% 2%;
@@ -709,24 +721,50 @@ input {
         border-bottom: 2px solid $circle-divider-color;
         width: 90%;
         margin-left: 5%;
+        justify-content: center;
+
     }
     &-container {
         margin: 4% auto;
         display: flex;
+
+        @include tablet {
+            margin: 2% auto;
+        }
     }
     &-name {
         display: inline-flex;
         font-weight: 600;
         margin: 6% 0 0 0;
+        
+        @include tablet {
+            margin: 0;
+        }
+
+        @include tablet {
+            font-size: $h4-desktab-fontsize;
+            margin-right: 2%;
+        }
     }
     &-date {
         display: inline-flex;
         margin: 6% 0 0 0;
         color: $date-color;
+
+        @include tablet {
+            margin: 0;
+            font-size: $h4-desktab-fontsize;
+        }
     }
     &-text {
         margin: 4% 0 0 0;
         display: inline-flex;
         width: 100%;
+
+        @include tablet {
+            font-size: $h4-desktab-fontsize;
+            line-height: 150%;
+            margin-top: 2%;
+        }
     }
 }
