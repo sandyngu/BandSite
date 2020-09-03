@@ -65,6 +65,7 @@ body {
 .button {
   background-color: #323232;
   border-radius: 4%;
+  border: none;
 }
 
 /*Font Sizes*/
@@ -649,7 +650,6 @@ input {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin: 0 auto;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
@@ -683,6 +683,7 @@ input {
   border: 1.5px solid #E1E1E1;
   outline: none;
   border-radius: 3%;
+  font-family: 'Avenir';
 }
 
 @media screen and (min-width: 320px) and (max-width: 767px) {
@@ -776,12 +777,13 @@ input {
 .comments-section__button-comment {
   font-weight: 600;
   letter-spacing: 0.5px;
+  float: right;
 }
 
 @media screen and (min-width: 320px) and (max-width: 767px) {
   .comments-section__button-comment {
     font-size: 0.91rem;
-    width: 60%;
+    width: 99%;
     margin: 0 1% 8% 1%;
     padding: 5.5% 4.3%;
   }
@@ -790,18 +792,18 @@ input {
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .comments-section__button-comment {
     font-size: 0.75rem;
-    width: 20%;
-    margin: 0 8.5% 2.5% 1%;
-    padding: 2.3% 1.2%;
+    width: 30%;
+    margin: 0 12% 2.5% 1%;
+    padding: 3% 1.2%;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .comments-section__button-comment {
     font-size: 0.86rem;
-    width: 13%;
-    margin: 0 30.5% 3% 1%;
-    padding: 1.75% 1%;
+    width: 21%;
+    margin: 0 43.5% 3% 1%;
+    padding: 2.5% 1%;
   }
 }
 
@@ -1056,18 +1058,26 @@ input {
 }
 
 /*Comments Section JavaScript*/
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .comments-section__guestbook {
+    font-size: 0.91rem;
+  }
+}
+
 .comments-section__guestbook-entry {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 5%;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 5%;
 }
 
 .comments-section__guestbook-photo {
-  background-color: grey;
+  background-color: #AFAFAF;
   background-position: 20% 50%;
   height: 40px;
   width: 40px;
@@ -1099,14 +1109,26 @@ input {
 }
 
 .comments-section__guestbook-container {
-  margin: 0 auto;
+  margin: 4% auto;
 }
 
 .comments-section__guestbook-name {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-weight: 600;
   margin: 6% 0;
 }
 
 .comments-section__guestbook-date {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   margin: 6% 0;
+  color: #AFAFAF;
+}
+
+.comments-section__guestbook-text {
+  margin: 4%;
 }
 /*# sourceMappingURL=main.css.map */

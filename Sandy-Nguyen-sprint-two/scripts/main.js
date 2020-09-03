@@ -21,3 +21,21 @@
 // commentSection.insertBefore(comment1, referenceNode);
 // commentSection.insertBefore(comment2, referenceNode);
 // commentSection.insertBefore(comment3, referenceNode);
+
+const commentsForm = document.querySelector('.comments-section__form');
+console.log('elements', commentsForm.elements);
+console.log('name element', commentsForm.elements[0]);
+console.log('by field name', commentsForm.elements.name);
+
+function commentsFormHandler(e) {
+    e.preventDefault
+    console.log(e);
+    const name = e.target.name.value;
+    console.log(name);
+    const comment = e.target.comment.value;
+    console.log(comment);
+}
+
+commentsForm.addEventListener ('submit', commentsFormHandler);
+
+
