@@ -494,7 +494,7 @@ input {
             font-size: $h3-mobile-fontsize;
             width: 60%;
             margin: 0 1% 8% 1%;
-            padding: 6% 4.3%;
+            padding: 5.5% 4.3%;
             
         }     
         @include tablet {
@@ -669,5 +669,46 @@ input {
         @include desktop {
             padding: 1.5% 0 0 10%;
         }
+    }
+}
+
+/*Comments Section JavaScript*/
+
+.comments-section__guestbook {
+    &-entry {
+        display: flex;
+        justify-content: space-between;
+        padding: 5%;
+    }
+    &-photo {
+        background-color: grey;
+        background-position: 20% 50%;
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+        
+        @include mobile {
+            margin: 4%;
+        }
+        @include tablet {
+            margin: 2.5% 3%;
+        }
+        @include desktop {
+            margin: 2.8% 2%;
+        }
+    }
+    &-divider {
+        border-bottom: 2px solid $divider-color;
+        width: 290px;
+        margin-left: 5%;
+    }
+    &-container {
+        margin: 0 auto;
+    }
+    &-name {
+        margin: 6% 0;
+    }
+    &-date {
+        margin: 6% 0;
     }
 }
