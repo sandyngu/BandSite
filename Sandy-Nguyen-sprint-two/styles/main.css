@@ -142,7 +142,7 @@ body {
 
 @media screen and (min-width: 320px) and (max-width: 767px) {
   p {
-    font-size: 0.72rem;
+    font-size: 0.74rem;
   }
 }
 
@@ -163,11 +163,12 @@ a {
   text-decoration: none;
   text-align: center;
   color: white;
+  padding: 0;
 }
 
 @media screen and (min-width: 320px) and (max-width: 767px) {
   a {
-    font-size: 0.72rem;
+    font-size: 0.74rem;
     width: 50%;
   }
 }
@@ -404,7 +405,7 @@ a:hover {
   .main-section__quote1 {
     line-height: 22px;
     font-weight: 600;
-    letter-spacing: 0.3px;
+    letter-spacing: 0.4px;
   }
 }
 
@@ -608,7 +609,7 @@ input {
 
 @media screen and (min-width: 320px) and (max-width: 767px) {
   .comments-section__photo {
-    margin: 4% 6%;
+    margin: 4%;
   }
 }
 
@@ -702,10 +703,6 @@ input {
   }
 }
 
-.comments-section__form-input-name {
-  height: 3vh;
-}
-
 @media screen and (min-width: 320px) and (max-width: 767px) {
   .comments-section__form-input-name {
     width: 87%;
@@ -730,7 +727,7 @@ input {
 @media screen and (min-width: 320px) and (max-width: 767px) {
   .comments-section__form-input-comment {
     width: 87%;
-    height: 16vh;
+    height: 13vh;
     padding: 5%;
   }
 }
@@ -746,7 +743,7 @@ input {
 @media screen and (min-width: 1200px) {
   .comments-section__form-input-comment {
     width: 52%;
-    height: 13vh;
+    height: 10vh;
     padding: 2%;
   }
 }
@@ -759,7 +756,7 @@ input {
 
 @media screen and (min-width: 320px) and (max-width: 767px) {
   .comments-section__form-title {
-    font-size: 0.72rem;
+    font-size: 0.74rem;
     letter-spacing: 0.6px;
   }
 }
@@ -778,7 +775,6 @@ input {
 
 .comments-section__button-comment {
   font-weight: 600;
-  height: 3vh;
   letter-spacing: 0.5px;
 }
 
@@ -795,8 +791,8 @@ input {
   .comments-section__button-comment {
     font-size: 0.75rem;
     width: 20%;
-    margin: 0 8.5% 3% 1%;
-    padding: 2.5% 1%;
+    margin: 0 8.5% 2.5% 1%;
+    padding: 2.3% 1.2%;
   }
 }
 
@@ -848,7 +844,7 @@ input {
   .footer__heading-title {
     min-width: 100px;
     padding: 8% 2% 5% 4%;
-    font-size: 2rem;
+    font-size: 2.2rem;
   }
 }
 
@@ -1033,7 +1029,7 @@ input {
 
 @media screen and (min-width: 320px) and (max-width: 767px) {
   .footer__content1 {
-    font-size: 0.72rem;
+    font-size: 0.74rem;
     line-height: 17px;
   }
 }

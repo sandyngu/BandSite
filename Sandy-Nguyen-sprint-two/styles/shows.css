@@ -137,7 +137,7 @@ body {
 
 @media screen and (min-width: 320px) and (max-width: 767px) {
   p {
-    font-size: 0.72rem;
+    font-size: 0.74rem;
   }
 }
 
@@ -162,7 +162,7 @@ a {
 
 @media screen and (min-width: 320px) and (max-width: 767px) {
   a {
-    font-size: 0.72rem;
+    font-size: 0.74rem;
     width: 50%;
   }
 }
@@ -641,7 +641,7 @@ a:hover {
 
 @media screen and (min-width: 320px) and (max-width: 767px) {
   .footer__content1 {
-    font-size: 0.72rem;
+    font-size: 0.74rem;
     line-height: 17px;
   }
 }

@@ -76,6 +76,7 @@ a {
     text-decoration: none;
     text-align: center;
     color: white;
+    padding: 0;
     
     @include mobile {
         font-size: $p-mobile-fontsize;
@@ -235,7 +236,7 @@ a {
         @include mobile {
             line-height: 22px;
             font-weight: 600;
-            letter-spacing: 0.3px;
+            letter-spacing: 0.4px;
         }
 
         @include tablet {
@@ -375,7 +376,7 @@ input {
         border-radius: 50%;
         
         @include mobile {
-            margin: 4% 6%;
+            margin: 4%;
         }
         @include tablet {
             margin: 2.5% 3%;
@@ -434,7 +435,6 @@ input {
             }
 
             &-name {
-                height: 3vh;
             
                 @include mobile {
                     width: 87%;
@@ -453,7 +453,7 @@ input {
 
                 @include mobile {
                     width: 87%;
-                    height: 16vh;
+                    height: 13vh;
                     padding: 5%;
                 }
                 @include tablet {
@@ -463,7 +463,7 @@ input {
                 }
                 @include desktop {
                     width: 52%;
-                    height: 13vh;
+                    height: 10vh;
                     padding: 2%;
                 }
             }
@@ -488,7 +488,6 @@ input {
     }
     &__button-comment {
         font-weight: 600;
-        height: 3vh;
         letter-spacing: 0.5px;
         
         @include mobile {
@@ -501,8 +500,8 @@ input {
         @include tablet {
             font-size: $p-desktab-fontsize;
             width: 20%;
-            margin: 0 8.5% 3% 1%;
-            padding: 2.5% 1%;
+            margin: 0 8.5% 2.5% 1%;
+            padding: 2.3% 1.2%;
         }
         @include desktop {
             font-size: $h4-desktab-fontsize;
@@ -538,7 +537,7 @@ input {
             @include mobile {
                 min-width: 100px;
                 padding: 8% 2% 5% 4%;
-                font-size: 2rem;
+                font-size: 2.2rem;
             }
             @include tablet {
                 min-width: 250px;
