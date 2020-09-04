@@ -6,6 +6,12 @@ body {
     margin: 0;
 }
 
+.button {
+    background-color: $primary-background-color;
+    border-radius: 3.5%;
+    border: none;
+}
+
 /*Font Sizes*/
 
 h1 {
@@ -197,6 +203,7 @@ a {
             font-size: $hero-mobile-fontsize;
             padding: 5% 0 10% 6%;
             letter-spacing: 1.2px;
+            line-height: 145%;
         }
         @include tablet {
             width: 75%;
@@ -231,6 +238,13 @@ a {
     }
 }
 
+/*Shows Section*/
+
+.divider {
+    border-bottom: 2px solid $circle-divider-color;
+    justify-content: center;
+    margin-bottom: 3%;
+}
 .main-section {
 
     &__title {
@@ -244,7 +258,47 @@ a {
             padding: 1% 10%;
         }
     }
+    &__shows-container {
+        display: flex;
+        flex-wrap: wrap;
+        padding-bottom: 10%;
+    }
+    &__shows {
+        width: 100%;
+        margin: 0 7%;
+        
+        &-headings {
+            @include mobile {
+                display: none;
+            }
+        }
+        &-title {
+            color: $date-color;
+            letter-spacing: 0.75px;
+            margin-top: 10%;
+        }
+        &-date {
+            font-size: $h4-mobile-fontsize;
+            font-weight: 600;
+            letter-spacing: 0.75px;
+        }
+        &-content {
+            margin: 5% 0;
+        }
+
+        &-button {
+            width: 100%;
+            margin: 5.5% auto;
+            padding: 6% 2%;
+            font-weight: bold;
+            font-size: $h4-mobile-fontsize;
+            letter-spacing: 0.3px;
+        }
+    }
 }
+
+
+/*Get In Touch Footer Section*/
 
 .footer {
     background-color: $primary-background-color;

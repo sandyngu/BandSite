@@ -169,7 +169,7 @@ a {
         height: 400px; /*70vh*/
     }
     @include desktop {
-        height: 600px; /*100vh*/
+        height: 550px; /*100vh*/
     }
     
     &__title {
@@ -385,13 +385,13 @@ input {
         border-radius: 50%;
         
         @include mobile {
-            margin: 4%;
+            margin: 6%;
         }
         @include tablet {
-            margin: 2.5% 3%;
+            margin: 2.5%;
         }
         @include desktop {
-            margin: 2.8% 2%;
+            margin: 1.9%;
         }
     }
 
@@ -411,6 +411,7 @@ input {
         display: flex;
         flex-wrap: wrap;
         justify-content: flex-end;
+        margin: 0 auto;
         
         @include mobile {
             margin-right: 5%;
@@ -525,6 +526,10 @@ input {
 }
 
 /*Comments Section JavaScript*/
+.divider {
+    border-bottom: 2px solid $circle-divider-color;
+    justify-content: center;
+}
 
 .comments-section__guestbook {
     margin: 0 auto;
@@ -576,11 +581,8 @@ input {
         }
     }
     &-divider {
-        border-bottom: 2px solid $circle-divider-color;
         width: 90%;
         margin-left: 5%;
-        justify-content: center;
-
     }
     &-container {
         margin: 4% auto;

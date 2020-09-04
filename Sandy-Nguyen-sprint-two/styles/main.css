@@ -309,7 +309,7 @@ a:hover {
 
 @media screen and (min-width: 1200px) {
   .hero {
-    height: 600px;
+    height: 550px;
     /*100vh*/
   }
 }
@@ -626,19 +626,19 @@ input {
 
 @media screen and (min-width: 320px) and (max-width: 767px) {
   .comments-section__photo {
-    margin: 4%;
+    margin: 6%;
   }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .comments-section__photo {
-    margin: 2.5% 3%;
+    margin: 2.5%;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .comments-section__photo {
-    margin: 2.8% 2%;
+    margin: 1.9%;
   }
 }
 
@@ -669,6 +669,7 @@ input {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+  margin: 0 auto;
 }
 
 @media screen and (min-width: 320px) and (max-width: 767px) {
@@ -832,6 +833,13 @@ input {
 }
 
 /*Comments Section JavaScript*/
+.divider {
+  border-bottom: 2px solid #E1E1E1;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .comments-section__guestbook {
   margin: 0 auto;
 }
@@ -914,12 +922,8 @@ input {
 }
 
 .comments-section__guestbook-divider {
-  border-bottom: 2px solid #E1E1E1;
   width: 90%;
   margin-left: 5%;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 
 .comments-section__guestbook-container {
