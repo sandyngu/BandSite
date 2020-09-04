@@ -435,6 +435,7 @@ a:hover {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    margin-left: 6%;
   }
 }
 
@@ -475,6 +476,7 @@ a:hover {
 @media screen and (min-width: 1200px) {
   .main-section__shows-container {
     padding: 2% 0 3% 0;
+    width: 65%;
   }
 }
 
@@ -535,6 +537,7 @@ a:hover {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    width: 20%;
   }
 }
 
@@ -547,6 +550,12 @@ a:hover {
 
 .main-section__shows-headings-title-date {
   margin-right: 40%;
+}
+
+@media screen and (min-width: 1200px) {
+  .main-section__shows-headings-title-date {
+    margin-right: 35%;
+  }
 }
 
 .main-section__shows-title {
@@ -617,7 +626,7 @@ a:hover {
 
 @media screen and (min-width: 1200px) {
   .main-section__shows-button {
-    width: 23%;
+    width: 22%;
     height: 57%;
     padding: 0;
     margin: 0;

@@ -257,6 +257,7 @@ a {
 .main-section {
     @include desktop {
         display: flex;
+        margin-left: 6%;
     }
 
     &__title {
@@ -281,6 +282,7 @@ a {
         }
         @include desktop {
             padding: 2% 0 3% 0;
+            width: 65%;
         }
     }
     &__shows {
@@ -311,6 +313,7 @@ a {
             }
             @include desktop {
                 display: flex;
+                width: 20%;
             }
             &-title {
                 padding-right: 70%;
@@ -320,6 +323,10 @@ a {
 
                 &-date {
                     margin-right: 40%;
+
+                    @include desktop {
+                        margin-right: 35%;
+                    }
                 }
             }
         }
@@ -372,7 +379,7 @@ a {
                 margin: 0;
             }
             @include desktop {
-                width: 23%;
+                width: 22%;
                 height: 57%;
                 padding: 0;
                 margin: 0;
