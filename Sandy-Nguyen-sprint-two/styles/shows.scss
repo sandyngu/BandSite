@@ -249,8 +249,15 @@ a {
         width: 100%;
         margin: 0;
     }
+    @include desktop {
+        width: 100%;
+        margin: 0;
+    }
 }
 .main-section {
+    @include desktop {
+        display: flex;
+    }
 
     &__title {
         @include mobile {
@@ -261,7 +268,7 @@ a {
             margin-bottom: 2%;
         }
         @include desktop {
-            padding: 1% 10%;
+            padding: 1% 5%;
         }
     }
     &__shows-container {
@@ -271,6 +278,9 @@ a {
 
         @include tablet {
             padding-bottom: 5%;
+        }
+        @include desktop {
+            padding: 2% 0 3% 0;
         }
     }
     &__shows {
@@ -284,12 +294,22 @@ a {
             align-items: center;
             justify-content: space-between;
         }
+        @include desktop {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 3%;
+            align-items: center;
+            justify-content: space-between;
+        }
         
         &-headings {
             display: none;
             margin: 0 3%;
 
             @include tablet {
+                display: flex;
+            }
+            @include desktop {
                 display: flex;
             }
             &-title {
@@ -331,6 +351,10 @@ a {
                 padding-right: 10%;
                 margin: 4.5% 0;
             }
+            @include desktop {
+                padding-right: 10%;
+                margin: 4.5% 0;
+            }
         }
 
         &-button {
@@ -342,6 +366,12 @@ a {
             letter-spacing: 0.3px;
 
             @include tablet {
+                width: 23%;
+                height: 57%;
+                padding: 0;
+                margin: 0;
+            }
+            @include desktop {
                 width: 23%;
                 height: 57%;
                 padding: 0;
