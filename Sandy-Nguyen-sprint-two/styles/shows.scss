@@ -372,6 +372,7 @@ a {
             font-weight: bold;
             font-size: $h4-mobile-fontsize;
             letter-spacing: 0.3px;
+            color: white;
 
             @include tablet {
                 width: 23%;
