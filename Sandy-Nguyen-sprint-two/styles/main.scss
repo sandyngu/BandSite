@@ -544,27 +544,25 @@ input {
         font-size: $h3-mobile-fontsize;
     }
     @include tablet {
-        width: 71%;
-        margin-left: 15%;
+        width: 72%;
     }
     @include desktop {
-        width: 46%;
-        margin-left: 28%;
+        width: 48%;
     }
     
     &-entry {
         display: flex;
         flex-wrap: wrap;
-        margin: 2% 5% 2% 0;
+        margin: 0;
         
         @include mobile {
             justify-content: space-between;
         }
         @include tablet {
-            margin: 2% 5% 0 0;
+            margin: 2% 0 0 0;
         }
         @include desktop {
-            margin: 2% 5% 0 0;
+            margin: 2% 0 0 0;
         }
     }
     &-photo {
@@ -574,16 +572,16 @@ input {
         border-radius: 50%;
         
         @include mobile {
-            margin: 5% 3.3%;
-            width: 67%;
+            margin: 5% 3% 0 0;
+            width: 75%;
         }
         @include tablet {
-            margin: 1.5% 2%;
-            width: 20%;
+            margin: 1.5% 2% 0 0;
+            width: 22%;
         }
         @include desktop {
-            margin: 2.8% 2%;
-            width: 20%;
+            margin: 2.8% 3% 0 0;
+            width: 20.5%;
         }
     }
     &-divider {

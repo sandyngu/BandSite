@@ -1,4 +1,4 @@
-/*When the button of the form is pushed, the values input in the boxes will be pushed into the arrays with the values for the 3 comments*/
+/*When the button of the form is pushed, the values input in the boxes will be pushed into the arrays with the values of the 3 comments*/
 
 const commentsForm = document.querySelector('.comments-section__form');
 commentsForm.addEventListener('submit', commentsFormHandler);
@@ -22,6 +22,8 @@ const comments = ["They BLEW the ROOF off at their last show, once everyone star
 
 /*These functions create the comment sections*/
 
+const divider = document.querySelector('.comments-section__guestbook-divider');
+
 function function1() {
     let divider = document.createElement('div');
     divider.classList.add('divider', 'comments-section__guestbook-divider');
@@ -41,7 +43,7 @@ function function1() {
     guestbookText.classList.add('comments-section__guestbook-text');
     guestbookText.innerHTML = comments[0];
 
-    guestbook.appendChild(guestbookContainer);
+    divider.insertBefore(guestbookContainer, null);
     guestbookContainer.appendChild(guestbookPhoto);
     guestbookContainer.appendChild(guestbookEntry);
     guestbookEntry.appendChild(guestbookName);
@@ -54,7 +56,7 @@ setTimeout(function1, 0);
 
 function function2 () {
     for (let i = 0; i < 2; i++) {
-        function1(i);
+        function1(i)
     }
 }
 
