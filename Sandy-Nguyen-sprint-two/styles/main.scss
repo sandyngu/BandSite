@@ -12,6 +12,10 @@ body {
     border: none;
 }
 
+::placeholder {
+    color: black;
+}
+
 /*Font Sizes*/
 
 h1 {
@@ -502,6 +506,7 @@ input {
         font-weight: 600;
         letter-spacing: 0.5px;
         float: right;
+        color: white;
         
         @include mobile {
             font-size: $h3-mobile-fontsize;
@@ -582,7 +587,7 @@ input {
     }
     &-divider {
         width: 90%;
-        margin-left: 5%;
+        margin: 0 auto;
     }
     &-container {
         margin: 4% auto;

@@ -210,9 +210,10 @@ a {
             padding-left: 3%;
         }
         @include desktop {
-            width: 35%;
+            width: 50%;
             padding: 0 0 2.5% 11%;
-            letter-spacing: 1px;
+            letter-spacing: 0.5px;
+            font-size: $hero-desktab-fontsize;
         }
     }
 
@@ -230,9 +231,9 @@ a {
             padding: 5% 3%;
         }
         @include desktop {
-            width: 29%;
-            height: 110px;
-            padding: 0 10% 4% 0%;
+            width: 30%;
+            height: 120px;
+            padding: 0 10% 4.7% 0%;
         }
         
     }

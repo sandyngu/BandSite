@@ -68,6 +68,22 @@ body {
   border: none;
 }
 
+::-webkit-input-placeholder {
+  color: black;
+}
+
+:-ms-input-placeholder {
+  color: black;
+}
+
+::-ms-input-placeholder {
+  color: black;
+}
+
+::placeholder {
+  color: black;
+}
+
 /*Font Sizes*/
 @media screen and (min-width: 320px) and (max-width: 767px) {
   h1 {
@@ -803,6 +819,7 @@ input {
   font-weight: 600;
   letter-spacing: 0.5px;
   float: right;
+  color: white;
 }
 
 @media screen and (min-width: 320px) and (max-width: 767px) {
@@ -923,7 +940,7 @@ input {
 
 .comments-section__guestbook-divider {
   width: 90%;
-  margin-left: 5%;
+  margin: 0 auto;
 }
 
 .comments-section__guestbook-container {
