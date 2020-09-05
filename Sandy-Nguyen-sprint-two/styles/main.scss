@@ -531,6 +531,7 @@ input {
 }
 
 /*Comments Section JavaScript*/
+
 .divider {
     border-bottom: 2px solid $circle-divider-color;
     justify-content: center;
@@ -543,7 +544,7 @@ input {
         font-size: $h3-mobile-fontsize;
     }
     @include tablet {
-        width: 72%;
+        width: 71%;
         margin-left: 15%;
     }
     @include desktop {
@@ -577,8 +578,8 @@ input {
             width: 67%;
         }
         @include tablet {
-            margin: 1.5% 3%;
-            width: 19%;
+            margin: 1.5% 2%;
+            width: 20%;
         }
         @include desktop {
             margin: 2.8% 2%;
