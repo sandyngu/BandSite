@@ -94,7 +94,6 @@ a {
 
     @include mobile {
         flex-wrap: wrap;
-        justify-content: center;
     }
 
     &__main-logo {
@@ -113,34 +112,45 @@ a {
         }
     }
     &__menu {
+        display: flex;
         margin: 0;
         width: 100%;
         padding: 0;
-        display: flex;
+
+        @include mobile {
+            padding: 4% 0 0 0;
+            text-align: center;
+        }
 
         &-link {
             color: white;
+            margin: 0;
             list-style-type: none;
 
             @include mobile {
                 font-size: $h3-mobile-fontsize;
-                padding: 6% 0;
+                padding-bottom: 3%;
+                width: 50%;
             }        
             @include tablet {
                 display: inline-flex;
                 font-size: $h4-desktab-fontsize;
-                margin: 35px 15px 0 55px;
-                padding: 0 10% 17% 10%;
+                margin: 5% 0 0 8%;
+                padding: 0 1.5% 3% 1.5%;
             }
             @include desktop {
                 display: inline-flex;
                 font-size: $h4-desktab-fontsize;
-                margin: 35px 0 0 70px;
-                padding: 0 10% 17% 10%;
+                margin: 5% 0 0 8%;
+                padding: 0 1.5% 3% 1.5%;
             }
 
             &--active {
                 border-bottom: 5px solid white;
+
+                @include mobile {
+                    width: 50%;
+                }
             }
 
             &:hover {

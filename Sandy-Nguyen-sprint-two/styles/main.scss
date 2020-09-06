@@ -136,7 +136,6 @@ a {
             @include mobile {
                 font-size: $h3-mobile-fontsize;
                 padding-bottom: 3%;
-                margin: 0;
                 width: 50%;
             }        
             @include tablet {
