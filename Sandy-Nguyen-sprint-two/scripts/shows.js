@@ -24,8 +24,9 @@ const shows = [{
     location: 'San Francisco, CA'
 }]
 
-const titles = ["DATE", "VENUE", "LOCATION"];
+const titles = ["DATES", "VENUE", "LOCATION"];
 
+window.onload = parentFunction();
 
 function parentFunction() {
     let parentElement = document.createElement('div');
@@ -36,8 +37,6 @@ function parentFunction() {
     headings();
     loadData();
 };
-
-window.onload = parentFunction();
 
 function headings() {
     let heading = document.createElement('div');
@@ -105,15 +104,3 @@ function showCreator(show) {
     showsTitle3.innerText = titles[2];
     showsLocation.innerText = show.location;
 }
-
-// setTimeout(function1, 0);
-
-// setTimeout(showCreator, 0)
-
-// function function4() {
-// for (let i = 0; i < 5; i++) {
-//         showCreator(i);
-//     }
-// }
-
-// setTimeout(function4, 0)

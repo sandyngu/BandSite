@@ -231,7 +231,7 @@ a {
             padding: 5% 3%;
         }
         @include desktop {
-            width: 30%;
+            width: 27%;
             height: 120px;
             padding: 0 10% 4.7% 0%;
         }
@@ -256,6 +256,7 @@ a {
     }
 }
 .main-section {
+    
     @include desktop {
         display: flex;
         margin-left: 6%;
@@ -283,7 +284,7 @@ a {
         }
         @include desktop {
             padding: 2% 0 3% 0;
-            width: 65%;
+            width: 70%;
         }
     }
     &__shows {
@@ -317,20 +318,26 @@ a {
                 width: 20%;
             }
             &-title {
-                font-weight: normal;
+                font-weight: 600;
                 color: $date-color;
 
                 &-date {
                     @include tablet {
-                        margin-right: 121%;
+                        margin-right: 111%;
                     }
 
                     @include desktop {
-                        margin-right: 119%;
+                        margin-right: 115%;
                     }
                 }
                 &-venue {
-                    margin-right: 82.5%;
+                    @include tablet {
+                        margin-right: 79%;
+                    }
+
+                    @include desktop {
+                        margin-right: 80%;
+                    }
                 }
             }
         }
@@ -338,6 +345,7 @@ a {
             color: $date-color;
             letter-spacing: 0.75px;
             margin-top: 10%;
+            font-weight: 600;
 
             @include tablet {
                 display: none;
@@ -378,8 +386,8 @@ a {
             color: white;
 
             @include tablet {
-                width: 23%;
-                height: 57%;
+                width: 21%;
+                height: 59%;
                 padding: 0;
                 margin: 0;
             }

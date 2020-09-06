@@ -357,7 +357,7 @@ a:hover {
 }
 @media screen and (min-width: 1200px) {
   .hero__music-player {
-    width: 30%;
+    width: 27%;
     height: 120px;
     padding: 0 10% 4.7% 0%;
   }
@@ -424,7 +424,7 @@ a:hover {
 @media screen and (min-width: 1200px) {
   .main-section__shows-container {
     padding: 2% 0 3% 0;
-    width: 65%;
+    width: 70%;
   }
 }
 .main-section__shows {
@@ -483,26 +483,34 @@ a:hover {
   }
 }
 .main-section__shows-headings-title {
-  font-weight: normal;
+  font-weight: 600;
   color: #AFAFAF;
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .main-section__shows-headings-title-date {
-    margin-right: 121%;
+    margin-right: 111%;
   }
 }
 @media screen and (min-width: 1200px) {
   .main-section__shows-headings-title-date {
-    margin-right: 119%;
+    margin-right: 115%;
   }
 }
-.main-section__shows-headings-title-venue {
-  margin-right: 82.5%;
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .main-section__shows-headings-title-venue {
+    margin-right: 79%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .main-section__shows-headings-title-venue {
+    margin-right: 80%;
+  }
 }
 .main-section__shows-title {
   color: #AFAFAF;
   letter-spacing: 0.75px;
   margin-top: 10%;
+  font-weight: 600;
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .main-section__shows-title {
@@ -550,8 +558,8 @@ a:hover {
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .main-section__shows-button {
-    width: 23%;
-    height: 57%;
+    width: 21%;
+    height: 59%;
     padding: 0;
     margin: 0;
   }
@@ -781,7 +789,7 @@ a:hover {
     padding: 1.5% 0 0 10%;
   }
 }
-/*# sourceMappingURL=shows.css.map */th: 1200px) {
+/*# sourceMappingURL=shows.css.map */dth: 1200px) {
   .footer__copyright {
     padding: 1.5% 0 0 10%;
   }

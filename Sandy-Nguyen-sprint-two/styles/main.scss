@@ -167,13 +167,13 @@ a {
     display: flex;
 
     @include mobile {
-        height: 200px; /*30vh*/
+        height: 200px;
     }
     @include tablet {
-        height: 400px; /*70vh*/
+        height: 400px;
     }
     @include desktop {
-        height: 550px; /*100vh*/
+        height: 550px;
     }
     
     &__title {
@@ -556,6 +556,7 @@ input {
         display: flex;
         flex-wrap: wrap;
         margin: 2% 5% 2% 0;
+        width: 100%;
         
         @include mobile {
             justify-content: space-between;
@@ -570,20 +571,17 @@ input {
     &-photo {
         background-color: $circle-divider-color;
         height: 40px;
-        width: 40px;
         border-radius: 50%;
+        min-width: 40px;
         
         @include mobile {
             margin: 5% 3.3%;
-            width: 67%;
         }
         @include tablet {
             margin: 1.5% 2%;
-            width: 20%;
         }
         @include desktop {
-            margin: 2.8% 2%;
-            width: 20%;
+            margin: 2.8% 2%;   
         }
     }
     &-divider {

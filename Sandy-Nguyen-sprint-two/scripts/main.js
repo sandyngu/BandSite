@@ -20,10 +20,12 @@ commentsForm.addEventListener('submit', commentsFormHandler);
 function commentsFormHandler(event) {
     event.preventDefault();
     let name = event.target.name.value;
+    let date = "06/09/2020";
     let comment = event.target.comment.value;
     commentsForm.reset();
     
-    let newComment = {name:name, 
+    let newComment = {name:name,
+        date:date, 
         comment:comment};
         comments.unshift(newComment);
 
@@ -49,10 +51,10 @@ window.onload = parentFunction();
 /*These functions create the comment sections, using data from the array*/
     
 function loadComment() {
-    comments.forEach((data) => commentCreator(data));
+    comments.forEach((data) => displayComment(data));
 };
     
-function commentCreator(comment) {
+function displayComment(comment) {
     let divider = document.createElement('div');
     divider.classList.add('divider', 'comments-section__guestbook-divider');
     let guestbookContainer = document.createElement('div');
