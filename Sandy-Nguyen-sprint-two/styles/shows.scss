@@ -317,17 +317,20 @@ a {
                 width: 20%;
             }
             &-title {
-                padding-right: 70%;
                 font-weight: normal;
                 color: $date-color;
-                margin: 10% 0 1% 0;
 
                 &-date {
-                    margin-right: 40%;
+                    @include tablet {
+                        margin-right: 121%;
+                    }
 
                     @include desktop {
-                        margin-right: 35%;
+                        margin-right: 119%;
                     }
+                }
+                &-venue {
+                    margin-right: 82.5%;
                 }
             }
         }
@@ -347,6 +350,7 @@ a {
             font-size: $h4-mobile-fontsize;
             font-weight: 600;
             letter-spacing: 0.75px;
+            padding-right: 7%;
 
             @include tablet {
                 font-size: $h4-desktab-fontsize;
@@ -354,14 +358,13 @@ a {
         }
         &-content {
             margin: 5% 0;
+            width: 150px;
 
             @include tablet {
-                padding-right: 10%;
-                margin: 4.5% 0;
+                margin: 4% 0;
             }
             @include desktop {
-                padding-right: 10%;
-                margin: 4.5% 0;
+                margin: 4% 0;
             }
         }
 
