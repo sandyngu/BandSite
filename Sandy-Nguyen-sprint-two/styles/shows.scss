@@ -161,13 +161,13 @@ a {
     background-blend-mode: overlay;
 
     @include mobile {
-        height: 460px; /*78vh*/
+        height: 460px;
     }
     @include tablet {
-        height: 680px; /*125vh*/
+        height: 680px;
     }
     @include desktop {
-        height: 600px; /*130vh*/
+        height: 600px;
     }
 
     &__album {
@@ -234,8 +234,7 @@ a {
             width: 27%;
             height: 120px;
             padding: 0 10% 4.7% 0%;
-        }
-        
+        } 
     }
 }
 
