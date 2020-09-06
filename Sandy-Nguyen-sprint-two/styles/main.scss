@@ -92,6 +92,13 @@ a {
         animation: forfun 1.5s linear infinite;
     }
 }
+li {
+    list-style-type: none;
+    
+    @include mobile {
+        width: 50%;
+    }
+}
 .nav-bar {
     background-color: $primary-background-color;
     display: flex;
@@ -99,7 +106,6 @@ a {
 
     @include mobile {
         flex-wrap: wrap;
-        justify-content: center;
     }
 
     &__main-logo {
@@ -118,18 +124,22 @@ a {
         }
     }
     &__menu {
-        margin: 0;
-        width: 100%;
-        padding: 0;
         display: flex;
+        margin: 0 auto;
+        width: 100%;
+        
+        @include mobile {
+            padding: 5% 0;
+            text-align: center;
+        }
 
         &-link {
             color: white;
-            list-style-type: none;
+            margin: 0 auto;
 
             @include mobile {
                 font-size: $h3-mobile-fontsize;
-                padding: 6% 0;
+                padding: 8% 30%;
             }        
             @include tablet {
                 display: inline-flex;

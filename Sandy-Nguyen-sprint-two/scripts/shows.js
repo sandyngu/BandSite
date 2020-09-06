@@ -24,9 +24,7 @@ const shows = [{
     location: 'San Francisco, CA'
 }]
 
-const titles = ["DATES", "VENUE", "LOCATION"];
-
-window.onload = parentFunction();
+const titles = ['DATES', 'VENUE', 'LOCATION'];
 
 function parentFunction() {
     let parentElement = document.createElement('div');
@@ -38,17 +36,19 @@ function parentFunction() {
     loadData();
 };
 
+window.onload = parentFunction();
+
 function headings() {
     let heading = document.createElement('div');
     heading.classList.add('main-section__shows-headings');
     let headingsTitleDate = document.createElement('p');
-    headingsTitleDate.classList.add('main-section__shows-headings-title',  'main-section__shows-headings-title-date');
+    headingsTitleDate.classList.add('main-section__shows-headings-title', 'main-section__shows-headings-title-date');
     headingsTitleDate.innerHTML = titles[0];
     let headingsTitleVenue = document.createElement('p');
-    headingsTitleVenue.classList.add('main-section__shows-headings-title',  'main-section__shows-headings-title-venue');
+    headingsTitleVenue.classList.add('main-section__shows-headings-title', 'main-section__shows-headings-title-venue');
     headingsTitleVenue.innerHTML = titles[1];
     let headingsTitleLocation = document.createElement('p');
-    headingsTitleLocation.classList.add('main-section__shows-headings-title',  'main-section__shows-headings-title-location');
+    headingsTitleLocation.classList.add('main-section__shows-headings-title', 'main-section__shows-headings-title-location');
     headingsTitleLocation.innerHTML = titles[2];
 
     let showsContainer = document.querySelector('.main-section__shows-container');
@@ -56,8 +56,7 @@ function headings() {
     showsContainer.appendChild(heading);
     heading.appendChild(headingsTitleDate);
     heading.appendChild(headingsTitleVenue);
-    heading.appendChild(headingsTitleLocation);
-    
+    heading.appendChild(headingsTitleLocation);   
 }
 
 function loadData () {

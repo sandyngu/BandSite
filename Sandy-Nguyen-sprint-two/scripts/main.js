@@ -1,18 +1,18 @@
 const comments = [{
-    name: "Michael Lyons",
-    date: "12/12/2018",
-    comment: "They BLEW the ROOF off at their last show, once everyone started figuring out they were going. This is still simply the greatest opening of a concert I have EVER witnessed."
+    name: 'Michael Lyons',
+    date: '12/12/2018',
+    comment: 'They BLEW the ROOF off at their last show, once everyone started figuring out they were going. This is still simply the greatest opening of a concert I have EVER witnessed.'
 }, {
-    name: "Gary Wong",
-    date: "12/12/2018",
-    comment: "Every time I see him shred I feel so motivated to get off my couch and hop on my board. He’s so talented! I wish I can ride like him one day so I can really enjoy myself!"
+    name: 'Gary Wong',
+    date: '12/12/2018',
+    comment: 'Every time I see him shred I feel so motivated to get off my couch and hop on my board. He’s so talented! I wish I can ride like him one day so I can really enjoy myself!'
 }, {
-    name: "Theodore Duncan",
-    date: "11/15/2018",
-    comment: "How can someone be so good!!! You can tell he lives for this and loves to do it every day. Everytime I see him I feel instantly happy! He’s definitely my favorite ever!"
+    name: 'Theodore Duncan',
+    date: '11/15/2018',
+    comment: 'How can someone be so good!!! You can tell he lives for this and loves to do it every day. Everytime I see him I feel instantly happy! He’s definitely my favorite ever!'
 }]
 
-/*When the button of the form is pushed, the values input in the boxes will be pushed into the arrays with the values of the 3 comments; a new comment box will created. After submitting the form, the contents of the form will clear*/
+/*When the button of the form is clicked, the values put in the fields will be pushed into the arrays with the values of the 3 comments. The date will also be determined and added to the array. The contents of the form will clear and the data will be loaded into the element creator*/
 
 const commentsForm = document.querySelector('.comments-section__form');
 commentsForm.addEventListener('submit', commentsFormHandler);
@@ -20,17 +20,22 @@ commentsForm.addEventListener('submit', commentsFormHandler);
 function commentsFormHandler(event) {
     event.preventDefault();
     let name = event.target.name.value;
-    let date = "06/09/2020";
-    let comment = event.target.comment.value;
-    commentsForm.reset();
-    
-    let newComment = {name:name,
-        date:date, 
+
+    let date = new Date();
+    let day = date.getDate();
+    let month = date.getMonth()+1;
+    let year = date.getFullYear();
+    date = month + '/' + day + '/' + year;
+
+    let comment = event.target.comment.value;    
+    let newComment = {name:name, 
+        date:date,
         comment:comment};
         comments.unshift(newComment);
-
+        
+        commentsForm.reset();
         loadComment();
-    };
+};
 
 /*This creates the parent div for the comments section and loads the other comments*/
     
