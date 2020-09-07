@@ -12,7 +12,7 @@ const comments = [{
     comment: 'How can someone be so good!!! You can tell he lives for this and loves to do it every day. Everytime I see him I feel instantly happy! He’s definitely my favorite ever!'
 }]
 
-/*When the button of the form is clicked, the values put in the fields will be pushed into the arrays with the values of the 3 comments. The date will also be determined and added to the array. The contents of the form will clear and the data will be loaded into the element creator*/
+/*When the button of the form is clicked, the values put in the fields will be pushed into the arrays with the values of the 3 comments. The date will also be determined and added to the array. The contents of the form will clear, the loaded comments will be deleted, and the data will be reloaded, and put back into the element creator*/
 
 const commentsForm = document.querySelector('.comments-section__form');
 commentsForm.addEventListener('submit', commentsFormHandler);
@@ -34,11 +34,17 @@ function commentsFormHandler(event) {
         comments.unshift(newComment);
         
         commentsForm.reset();
-        loadComment();
-};
-
-/*This creates the parent div for the comments section and loads the other comments*/
+        deleteAll();
+        parentFunction();
+    };
     
+function deleteAll() {
+    document.querySelector('.comments-section__guestbook').remove();
+}
+    /*This creates the parent div for the comments section and loads the other comments*/
+    
+window.onload = parentFunction(); 
+
 function parentFunction() {
     let parentElement = document.createElement('div');
     parentElement.classList.add('comments-section__guestbook');
@@ -51,7 +57,6 @@ function parentFunction() {
     loadComment();
 };
 
-window.onload = parentFunction(); 
     
 /*These functions create the comment sections, using data from the array*/
     

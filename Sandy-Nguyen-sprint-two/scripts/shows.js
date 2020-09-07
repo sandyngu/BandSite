@@ -26,6 +26,8 @@ const shows = [{
 
 const titles = ['DATES', 'VENUE', 'LOCATION'];
 
+/*This creates the parent div for the shows section and loads the show details*/
+
 function parentFunction() {
     let parentElement = document.createElement('div');
     parentElement.classList.add('main-section__shows-container');
@@ -34,9 +36,12 @@ function parentFunction() {
     
     headings();
     loadData();
+    clear();
 };
 
 window.onload = parentFunction();
+
+/*This creates the headings section with date, venue and location*/
 
 function headings() {
     let heading = document.createElement('div');
@@ -58,6 +63,8 @@ function headings() {
     heading.appendChild(headingsTitleVenue);
     heading.appendChild(headingsTitleLocation);   
 }
+
+/*This takes the data from the array and creates elements for the contents*/
 
 function loadData () {
     shows.forEach((data) => showCreator(data));
