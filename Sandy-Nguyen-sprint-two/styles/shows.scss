@@ -8,7 +8,7 @@ body {
 
 .button {
     background-color: $primary-background-color;
-    border-radius: 3.5%;
+    border-radius: 5px;
     border: none;
 }
 
@@ -171,13 +171,13 @@ a {
     background-blend-mode: overlay;
 
     @include mobile {
-        height: 460px;
+        height: 100vh;
     }
     @include tablet {
-        height: 680px;
+        height: 140vh;
     }
     @include desktop {
-        height: 600px;
+        height: 130vh;
     }
 
     &__album {
@@ -192,7 +192,7 @@ a {
             padding: 13% 0 3% 3%;
         }
         @include desktop {
-            padding: 13% 0 3% 11%;
+            padding: 11% 0 3% 11%;
         }
     }
     &__flex {
@@ -318,6 +318,7 @@ a {
         &-headings {
             display: none;
             margin: 0 3%;
+            width: 150px;
 
             @include tablet {
                 display: flex;
@@ -332,20 +333,20 @@ a {
 
                 &-date {
                     @include tablet {
-                        margin-right: 111%;
+                        padding-right: 120%;
                     }
 
                     @include desktop {
-                        margin-right: 115%;
+                        padding-right: 116%;
                     }
                 }
                 &-venue {
                     @include tablet {
-                        margin-right: 79%;
+                        padding-right: 86%;
                     }
 
                     @include desktop {
-                        margin-right: 80%;
+                        padding-right: 83%;
                     }
                 }
             }

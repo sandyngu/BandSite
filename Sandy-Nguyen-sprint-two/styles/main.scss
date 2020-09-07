@@ -8,7 +8,7 @@ body {
 
 .button {
     background-color: $primary-background-color;
-    border-radius: 3.5%;
+    border-radius: 5px;
     border: none;
 }
 
@@ -132,6 +132,7 @@ a {
             color: white;
             margin: 0;
             list-style-type: none;
+            vertical-align: center;
 
             @include mobile {
                 font-size: $h3-mobile-fontsize;
@@ -178,13 +179,13 @@ a {
     display: flex;
 
     @include mobile {
-        height: 200px;
+        height: 40vh;
     }
     @include tablet {
-        height: 400px;
+        height: 90vh;
     }
     @include desktop {
-        height: 550px;
+        height: 120vh;
     }
     
     &__title {
@@ -446,7 +447,7 @@ input {
             background-color: $comments-box-color;
             border: 1.5px solid #E1E1E1;
             outline: none;
-            border-radius: 3.5%;
+            border-radius: 5px;
 
             @include mobile {
                 margin-bottom: 8%;
@@ -534,18 +535,15 @@ input {
         }
         @include desktop {
             font-size: $h4-desktab-fontsize;
-            width: 21%;
+            width: 22%;
             margin: 0 43.5% 3% 1%;
             padding: 2.5% 1%;
         }
     }
 }
 
-/*Comments Section JavaScript*/
-
 .divider {
     border-bottom: 2px solid $circle-divider-color;
-    justify-content: center;
 }
 
 .comments-section__guestbook {
