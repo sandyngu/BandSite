@@ -277,7 +277,7 @@ a:hover {
 }
 @media screen and (min-width: 1200px) {
   .hero {
-    height: 120vh;
+    height: 130vh;
   }
 }
 .hero__album {
@@ -364,10 +364,9 @@ a:hover {
 }
 @media screen and (min-width: 1200px) {
   .hero__music-player {
-    float: right;
     width: 27%;
     height: 120px;
-    padding: 0 0 5% 62%;
+    padding: 0 0 4.5% 62%;
   }
 }
 

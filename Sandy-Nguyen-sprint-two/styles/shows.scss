@@ -175,7 +175,7 @@ a {
         height: 130vh;
     }
     @include desktop {
-        height: 120vh;
+        height: 130vh;
     }
 
     &__album {
@@ -242,10 +242,9 @@ a {
             padding: 5% 3%;
         }
         @include desktop {
-            float: right;
             width: 27%;
             height: 120px;
-            padding: 0 0 5% 62%;
+            padding: 0 0 4.5% 62%;
         } 
     }
 }
