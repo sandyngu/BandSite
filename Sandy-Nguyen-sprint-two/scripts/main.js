@@ -12,7 +12,7 @@ const comments = [{
     comment: 'How can someone be so good!!! You can tell he lives for this and loves to do it every day. Everytime I see him I feel instantly happy! He’s definitely my favorite ever!'
 }];
 
-/*When the button of the form is clicked, the values put in the fields will be pushed into the front of the array with the values of the 3 comments. The date will also be determined and added to the array. The contents of the form will clear, the loaded comments will be deleted and a parent container will be made*/
+/*When the button of the form is clicked, the values put in the fields will be pushed into the front of the array with the values of the other 3 comments. The date will also be determined and added to the array. The contents of the form will clear, the loaded comments will be deleted and a parent container will be made*/
 
 const commentsForm = document.querySelector('.comments-section__form');
 commentsForm.addEventListener('submit', commentsFormHandler);
