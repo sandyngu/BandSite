@@ -13,7 +13,7 @@ body {
 }
 
 ::placeholder {
-    color: black;
+    color: $primary-background-color;
 }
 
 /*Font Sizes*/
@@ -177,25 +177,21 @@ a {
     background-repeat: no-repeat;
     background-blend-mode: overlay;
     display: flex;
+    height: 40vh;
 
-    @include mobile {
-        height: 40vh;
-    }
     @include tablet {
         height: 90vh;
     }
     @include desktop {
-        height: 120vh;
+        height: 110vh;
     }
     
     &__title {
         color: white;
         line-height: 130%;
         align-items: center;
-    
-        @include mobile {
-            padding-left: 6%;
-        }
+        padding-left: 6%;
+
         @include tablet {
             padding-left: 3%;
         }
@@ -210,9 +206,8 @@ a {
 .main-section {
 
     &__title {
-        @include mobile {
-            padding: 2% 7% 0 6%;
-        }
+        padding: 2% 7% 0 6%;
+
         @include tablet {
             padding: 1% 3%;
         }
@@ -223,10 +218,8 @@ a {
     &__image {
         display: block;
         margin: 0 auto;
+        width: 88%;
 
-        @include mobile {
-            width: 88%;
-        }
         @include tablet {
             width: 94%;
         }
@@ -298,10 +291,8 @@ a {
     &__content {
         display: inline-flex;
         line-height: 20px;
-
-        @include mobile {
-            padding: 0 6%;
-        }
+        padding: 0 6%;
+        
         @include tablet {
             font-size: $h4-desktab-fontsize;
             padding: 0 3%;
@@ -321,10 +312,8 @@ a {
     background-color: $secondary-background-color;
 
     &__title {
+        padding: 10% 0 0 6%;
 
-        @include mobile {
-            padding: 10% 0 0 6%;
-        }
         @include tablet {
             padding: 6% 0 0 3%;
         }
@@ -336,22 +325,20 @@ a {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        padding: 0 0 2.5% 0;
         margin: 2% 4% 0 4%;
+        padding: 0 0 8% 0;
 
-        @include mobile {
-            padding: 0 0 8% 0;
-        }
         @include tablet {
             margin: 0;
         }
+        @include desktop {
+            padding: 0 0 2.5% 0;
+        }
     }
     &__photo {
+        width: 95%;
+        margin: 2.75%;
 
-        @include mobile {
-            width: 95%;
-            margin: 2.75%;
-        }
         @include tablet {
             width: 29.2%;
             margin: 1.5%;
@@ -371,10 +358,8 @@ a {
 
 input {
     font-family:'Avenir';
+    font-size: $h3-mobile-fontsize;
 
-    @include mobile {
-        font-size: $h3-mobile-fontsize;
-    }
     @include tablet {
         font-size: $h4-desktab-fontsize;
     }
@@ -399,10 +384,8 @@ input {
         height: 50px;
         width: 50px;
         border-radius: 50%;
-        
-        @include mobile {
-            margin: 6%;
-        }
+        margin: 6%;
+
         @include tablet {
             margin: 2.5%;
         }
@@ -412,9 +395,8 @@ input {
     }
 
     &__title {
-        @include mobile {
-            padding: 3% 0 3% 5%;
-        }
+        padding: 3% 0 3% 5%;
+        
         @include tablet {
             padding: 2% 0 0 3%;
         }
@@ -448,10 +430,8 @@ input {
             border: 1.5px solid #E1E1E1;
             outline: none;
             border-radius: 5px;
-
-            @include mobile {
-                margin-bottom: 8%;
-            }
+            margin-bottom: 8%;
+            
             @include tablet {
                 margin-bottom: 4%;
             }
@@ -461,11 +441,9 @@ input {
 
             &-name {
                 border: 2px solid $primary-background-color;
-            
-                @include mobile {
-                    width: 84.5%;
-                    padding: 6%;
-                }
+                width: 84.5%;
+                padding: 6%;
+                
                 @include tablet {
                     width: 82%;
                     padding: 3%;
@@ -478,12 +456,10 @@ input {
             &-comment {
                 resize: none;
                 font-family: 'Avenir';
+                width: 85%;
+                height: 13vh;
+                padding: 6%;
 
-                @include mobile {
-                    width: 85%;
-                    height: 13vh;
-                    padding: 6%;
-                }
                 @include tablet {
                     width: 82%;
                     height: 11vh;
@@ -501,11 +477,8 @@ input {
             color: $comments-title-color;
             font-weight: normal;
             margin: 1% 0;
-
-            @include mobile {
-                font-size: $p-mobile-fontsize;
-                letter-spacing: 0.6px;
-            }
+            font-size: $p-mobile-fontsize;
+            
             @include tablet {
                 font-size: $p-desktab-fontsize;
             }
@@ -519,14 +492,11 @@ input {
         letter-spacing: 0.5px;
         float: right;
         color: white;
-        
-        @include mobile {
-            font-size: $h3-mobile-fontsize;
-            width: 98%;
-            margin: 0 1% 15% 1%;
-            padding: 7% 4.3%;
-            
-        }     
+        font-size: $h3-mobile-fontsize;
+        width: 98%;
+        margin: 0 1% 15% 1%;
+        padding: 7% 4.3%;
+               
         @include tablet {
             font-size: $p-desktab-fontsize;
             width: 30%;
@@ -582,10 +552,8 @@ input {
         height: 40px;
         border-radius: 50%;
         min-width: 40px;
+        margin: 5% 3.3%;
         
-        @include mobile {
-            margin: 5% 3.3%;
-        }
         @include tablet {
             margin: 1.5% 2%;
         }
@@ -598,15 +566,8 @@ input {
         margin: 0 auto;
     }
     &-container {
-        margin: 4% auto;
+        margin: 2% auto;
         display: flex;
-
-        @include tablet {
-            margin: 2% auto;
-        }
-        @include desktop {
-            margin: 2% auto;
-        }
     }
     &-name {
         display: inline-flex;
@@ -662,9 +623,8 @@ input {
     padding-bottom: 2%;
 
     &__heading {
-        @include mobile {
-            padding: 5% 0;
-        }
+        padding: 5% 0;
+        
         @include tablet {
             display: flex;
             padding: 5% 0;
@@ -707,11 +667,9 @@ input {
             }
         }
         &-logo {
+            padding: 4% 8% 4% 0;
+            width: 20px;
             
-            @include mobile {
-                padding: 4% 8% 4% 0;
-                width: 20px;
-            }
             @include tablet {
                 display: inline-flex;
                 padding: 0 8% 0 0;
@@ -724,10 +682,8 @@ input {
             }
         }
         &-logo2 {
-
-            @include mobile {
-                width: 11px;
-            }
+            width: 11px;
+            
             @include tablet {
                 width: 14px;
             }

@@ -169,15 +169,13 @@ a {
     background-position: bottom;
     background-repeat: no-repeat;
     background-blend-mode: overlay;
+    height: 95vh;
 
-    @include mobile {
-        height: 100vh;
-    }
     @include tablet {
-        height: 140vh;
+        height: 130vh;
     }
     @include desktop {
-        height: 130vh;
+        height: 120vh;
     }
 
     &__album {
@@ -252,7 +250,6 @@ a {
 
 .divider {
     border-bottom: 2px solid $circle-divider-color;
-    justify-content: center;
     margin-bottom: 3%;
 
     @include tablet {

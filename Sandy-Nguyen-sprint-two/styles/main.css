@@ -64,23 +64,23 @@ body {
 }
 
 ::-webkit-input-placeholder {
-  color: black;
+  color: #323232;
 }
 
 ::-moz-placeholder {
-  color: black;
+  color: #323232;
 }
 
 :-ms-input-placeholder {
-  color: black;
+  color: #323232;
 }
 
 ::-ms-input-placeholder {
-  color: black;
+  color: #323232;
 }
 
 ::placeholder {
-  color: black;
+  color: #323232;
 }
 
 /*Font Sizes*/
@@ -293,11 +293,7 @@ a:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-}
-@media screen and (min-width: 320px) and (max-width: 767px) {
-  .hero {
-    height: 40vh;
-  }
+  height: 40vh;
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .hero {
@@ -306,7 +302,7 @@ a:hover {
 }
 @media screen and (min-width: 1200px) {
   .hero {
-    height: 120vh;
+    height: 110vh;
   }
 }
 .hero__title {
@@ -315,11 +311,7 @@ a:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-@media screen and (min-width: 320px) and (max-width: 767px) {
-  .hero__title {
-    padding-left: 6%;
-  }
+  padding-left: 6%;
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .hero__title {
@@ -333,10 +325,8 @@ a:hover {
 }
 
 /*About the Musicians Section*/
-@media screen and (min-width: 320px) and (max-width: 767px) {
-  .main-section__title {
-    padding: 2% 7% 0 6%;
-  }
+.main-section__title {
+  padding: 2% 7% 0 6%;
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .main-section__title {
@@ -351,11 +341,7 @@ a:hover {
 .main-section__image {
   display: block;
   margin: 0 auto;
-}
-@media screen and (min-width: 320px) and (max-width: 767px) {
-  .main-section__image {
-    width: 88%;
-  }
+  width: 88%;
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .main-section__image {
@@ -449,11 +435,7 @@ a:hover {
   display: -ms-inline-flexbox;
   display: inline-flex;
   line-height: 20px;
-}
-@media screen and (min-width: 320px) and (max-width: 767px) {
-  .main-section__content {
-    padding: 0 6%;
-  }
+  padding: 0 6%;
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .main-section__content {
@@ -474,10 +456,8 @@ a:hover {
 .sub-section {
   background-color: #FAFAFA;
 }
-@media screen and (min-width: 320px) and (max-width: 767px) {
-  .sub-section__title {
-    padding: 10% 0 0 6%;
-  }
+.sub-section__title {
+  padding: 10% 0 0 6%;
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .sub-section__title {
@@ -498,24 +478,22 @@ a:hover {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 0 0 2.5% 0;
   margin: 2% 4% 0 4%;
-}
-@media screen and (min-width: 320px) and (max-width: 767px) {
-  .sub-section__photo-gallery {
-    padding: 0 0 8% 0;
-  }
+  padding: 0 0 8% 0;
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .sub-section__photo-gallery {
     margin: 0;
   }
 }
-@media screen and (min-width: 320px) and (max-width: 767px) {
-  .sub-section__photo {
-    width: 95%;
-    margin: 2.75%;
+@media screen and (min-width: 1200px) {
+  .sub-section__photo-gallery {
+    padding: 0 0 2.5% 0;
   }
+}
+.sub-section__photo {
+  width: 95%;
+  margin: 2.75%;
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .sub-section__photo {
@@ -537,11 +515,7 @@ a:hover {
 /*Comments Section*/
 input {
   font-family: "Avenir";
-}
-@media screen and (min-width: 320px) and (max-width: 767px) {
-  input {
-    font-size: 0.91rem;
-  }
+  font-size: 0.91rem;
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   input {
@@ -574,11 +548,7 @@ input {
   height: 50px;
   width: 50px;
   border-radius: 50%;
-}
-@media screen and (min-width: 320px) and (max-width: 767px) {
-  .comments-section__photo {
-    margin: 6%;
-  }
+  margin: 6%;
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .comments-section__photo {
@@ -590,10 +560,8 @@ input {
     margin: 1.9%;
   }
 }
-@media screen and (min-width: 320px) and (max-width: 767px) {
-  .comments-section__title {
-    padding: 3% 0 3% 5%;
-  }
+.comments-section__title {
+  padding: 3% 0 3% 5%;
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .comments-section__title {
@@ -640,11 +608,7 @@ input {
   border: 1.5px solid #E1E1E1;
   outline: none;
   border-radius: 5px;
-}
-@media screen and (min-width: 320px) and (max-width: 767px) {
-  .comments-section__form-input {
-    margin-bottom: 8%;
-  }
+  margin-bottom: 8%;
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .comments-section__form-input {
@@ -658,12 +622,8 @@ input {
 }
 .comments-section__form-input-name {
   border: 2px solid #323232;
-}
-@media screen and (min-width: 320px) and (max-width: 767px) {
-  .comments-section__form-input-name {
-    width: 84.5%;
-    padding: 6%;
-  }
+  width: 84.5%;
+  padding: 6%;
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .comments-section__form-input-name {
@@ -680,13 +640,9 @@ input {
 .comments-section__form-input-comment {
   resize: none;
   font-family: "Avenir";
-}
-@media screen and (min-width: 320px) and (max-width: 767px) {
-  .comments-section__form-input-comment {
-    width: 85%;
-    height: 13vh;
-    padding: 6%;
-  }
+  width: 85%;
+  height: 13vh;
+  padding: 6%;
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .comments-section__form-input-comment {
@@ -706,12 +662,7 @@ input {
   color: #AFAFAF;
   font-weight: normal;
   margin: 1% 0;
-}
-@media screen and (min-width: 320px) and (max-width: 767px) {
-  .comments-section__form-title {
-    font-size: 0.74rem;
-    letter-spacing: 0.6px;
-  }
+  font-size: 0.74rem;
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .comments-section__form-title {
@@ -728,14 +679,10 @@ input {
   letter-spacing: 0.5px;
   float: right;
   color: white;
-}
-@media screen and (min-width: 320px) and (max-width: 767px) {
-  .comments-section__button-comment {
-    font-size: 0.91rem;
-    width: 98%;
-    margin: 0 1% 15% 1%;
-    padding: 7% 4.3%;
-  }
+  font-size: 0.91rem;
+  width: 98%;
+  margin: 0 1% 15% 1%;
+  padding: 7% 4.3%;
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .comments-section__button-comment {
@@ -809,11 +756,7 @@ input {
   height: 40px;
   border-radius: 50%;
   min-width: 40px;
-}
-@media screen and (min-width: 320px) and (max-width: 767px) {
-  .comments-section__guestbook-photo {
-    margin: 5% 3.3%;
-  }
+  margin: 5% 3.3%;
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .comments-section__guestbook-photo {
@@ -830,20 +773,10 @@ input {
   margin: 0 auto;
 }
 .comments-section__guestbook-container {
-  margin: 4% auto;
+  margin: 2% auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-}
-@media screen and (min-width: 768px) and (max-width: 1199px) {
-  .comments-section__guestbook-container {
-    margin: 2% auto;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .comments-section__guestbook-container {
-    margin: 2% auto;
-  }
 }
 .comments-section__guestbook-name {
   display: -webkit-inline-box;
@@ -911,10 +844,8 @@ input {
   color: white;
   padding-bottom: 2%;
 }
-@media screen and (min-width: 320px) and (max-width: 767px) {
-  .footer__heading {
-    padding: 5% 0;
-  }
+.footer__heading {
+  padding: 5% 0;
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .footer__heading {
@@ -976,11 +907,9 @@ input {
     width: 100%;
   }
 }
-@media screen and (min-width: 320px) and (max-width: 767px) {
-  .footer__heading-logo {
-    padding: 4% 8% 4% 0;
-    width: 20px;
-  }
+.footer__heading-logo {
+  padding: 4% 8% 4% 0;
+  width: 20px;
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .footer__heading-logo {
@@ -1000,10 +929,8 @@ input {
     width: 25px;
   }
 }
-@media screen and (min-width: 320px) and (max-width: 767px) {
-  .footer__heading-logo2 {
-    width: 11px;
-  }
+.footer__heading-logo2 {
+  width: 11px;
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .footer__heading-logo2 {
@@ -1121,7 +1048,7 @@ input {
     padding: 1.5% 0 0 10%;
   }
 }
-/*# sourceMappingURL=main.css.map */ screen and (min-width: 1200px) {
+/*# sourceMappingURL=main.css.map */-width: 1200px) {
   .footer__copyright {
     padding: 1.5% 0 0 10%;
   }

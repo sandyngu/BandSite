@@ -10,9 +10,9 @@ const comments = [{
     name: 'Theodore Duncan',
     date: '11/15/2018',
     comment: 'How can someone be so good!!! You can tell he lives for this and loves to do it every day. Everytime I see him I feel instantly happy! He’s definitely my favorite ever!'
-}]
+}];
 
-/*When the button of the form is clicked, the values put in the fields will be pushed into the arrays with the values of the 3 comments. The date will also be determined and added to the array. The contents of the form will clear, the loaded comments will be deleted, and the data will be reloaded, and put back into the element creator*/
+/*When the button of the form is clicked, the values put in the fields will be pushed into the front of the array with the values of the 3 comments. The date will also be determined and added to the array. The contents of the form will clear, the loaded comments will be deleted and a parent container will be made*/
 
 const commentsForm = document.querySelector('.comments-section__form');
 commentsForm.addEventListener('submit', commentsFormHandler);
@@ -37,11 +37,14 @@ function commentsFormHandler(event) {
         deleteAll();
         parentFunction();
     };
-    
+
+/*This function deletes the container holding the comments elements*/
+
 function deleteAll() {
     document.querySelector('.comments-section__guestbook').remove();
-}
-    /*This creates the parent div for the comments section and loads the other comments*/
+};
+
+/*This function creates the parent div for the comments section and loads the other comments*/
     
 window.onload = parentFunction(); 
 
@@ -93,4 +96,4 @@ function displayComment(comment) {
     guestbookName.innerText = comment.name;
     guestbookDate.innerText = comment.date;
     guestbookText.innerText = comment.comment;
-}
+};

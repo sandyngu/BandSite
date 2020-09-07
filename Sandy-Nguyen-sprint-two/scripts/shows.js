@@ -22,11 +22,13 @@ const shows = [{
     date: 'Wed Aug 11 2019',
     venue: 'Pres Club',
     location: 'San Francisco, CA'
-}]
+}];
 
 const titles = ['DATES', 'VENUE', 'LOCATION'];
 
-/*This creates the parent div for the shows section and loads the show details*/
+/*This function creates the parent div for the shows section and loads the show details*/
+
+window.onload = parentFunction();
 
 function parentFunction() {
     let parentElement = document.createElement('div');
@@ -36,12 +38,10 @@ function parentFunction() {
     
     headings();
     loadData();
-    clear();
 };
 
-window.onload = parentFunction();
+/*This function creates the headings section with date, venue and location*/
 
-/*This creates the headings section with date, venue and location*/
 
 function headings() {
     let heading = document.createElement('div');
@@ -62,15 +62,15 @@ function headings() {
     heading.appendChild(headingsTitleDate);
     heading.appendChild(headingsTitleVenue);
     heading.appendChild(headingsTitleLocation);   
-}
+};
 
 /*This takes the data from the array and creates elements for the contents*/
 
 function loadData () {
-    shows.forEach((data) => showCreator(data));
-}
+    shows.forEach((data) => displayShows(data));
+};
 
-function showCreator(show) {
+function displayShows(show) {
     let showsList = document.createElement('div');
     showsList.classList.add('main-section__shows');
     let showsTitle1 = document.createElement('p');
@@ -109,4 +109,4 @@ function showCreator(show) {
     showsVenue.innerText = show.venue;
     showsTitle3.innerText = titles[2];
     showsLocation.innerText = show.location;
-}
+};
