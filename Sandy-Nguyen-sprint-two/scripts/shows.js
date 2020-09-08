@@ -64,7 +64,7 @@ function headings() {
     heading.appendChild(headingsTitleLocation);   
 };
 
-/*This takes the data from the array and creates elements for the contents*/
+/*This function takes the data from the array and creates elements for the contents*/
 
 function loadData () {
     shows.forEach((data) => displayShows(data));

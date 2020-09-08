@@ -15,9 +15,7 @@ const comments = [{
 /*When the button of the form is clicked, the values put in the fields will be pushed into the front of the array with the values of the other 3 comments. The date will also be determined and added to the array. The contents of the form will clear, the loaded comments will be deleted and a parent container will be made*/
 
 const commentsForm = document.querySelector('.comments-section__form');
-commentsForm.addEventListener('submit', commentsFormHandler);
-
-function commentsFormHandler(event) {
+commentsForm.addEventListener('submit', function commentsFormHandler(event) {
     event.preventDefault();
     let name = event.target.name.value;
 
@@ -36,7 +34,7 @@ function commentsFormHandler(event) {
         commentsForm.reset();
         deleteAll();
         parentFunction();
-    };
+    });
 
 /*This function deletes the container holding the comments elements*/
 
