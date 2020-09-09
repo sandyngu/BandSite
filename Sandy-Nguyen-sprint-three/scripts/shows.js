@@ -110,3 +110,4 @@ function displayShows(show) {
     showsTitle3.innerText = titles[2];
     showsLocation.innerText = show.location;
 };
+
