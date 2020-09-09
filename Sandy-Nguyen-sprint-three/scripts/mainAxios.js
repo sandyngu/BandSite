@@ -15,7 +15,7 @@ commentsForm.addEventListener('submit', function commentsFormHandler(event) {
     let newComment = {name:name, 
         date:date,
         comment:comment};
-        comments.unshift(newComment); /*NEED TO CHANGE COMMENTS*/
+        axios.res.unshift(newComment); /*NEED TO CHANGE COMMENTS*/
         
         commentsForm.reset();
         deleteAll();
@@ -42,6 +42,7 @@ let commentsURL = ('https://project-1-api.herokuapp.com/comments?api_key=9a757c7
 
 axios.get(commentsURL)
     .then(res => {
+        console.log(res)
     
     res.data.forEach(res => {
         
@@ -70,8 +71,10 @@ axios.get(commentsURL)
     guestbookEntry.appendChild(guestbookText);
     guestbook.appendChild(divider);
 
+    let time = new Date(res.timestamp); 
+        guestbookDate.innerText = time.toLocaleDateString(); 
+
     guestbookName.innerText = res.name;
-    guestbookDate.innerText = res.timestamp;
     guestbookText.innerText = res.comment;
 })
     .catch(err => console.log(err))
