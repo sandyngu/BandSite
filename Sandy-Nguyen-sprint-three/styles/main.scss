@@ -178,12 +178,15 @@ a {
     background-blend-mode: overlay;
     display: flex;
     height: 40vh;
+    min-height: 200px;
 
     @include tablet {
         height: 90vh;
+        max-height: 600px;
     }
     @include desktop {
-        height: 110vh;
+        height: 105vh;
+        max-height: 900px;
     }
     
     &__title {

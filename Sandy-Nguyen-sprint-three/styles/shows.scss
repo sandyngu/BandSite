@@ -169,13 +169,18 @@ a {
     background-position: bottom;
     background-repeat: no-repeat;
     background-blend-mode: overlay;
-    height: 90vh;
+    position: relative;
+    height: 70vh;
+    min-height: 470px;
+    
 
     @include tablet {
-        height: 130vh;
+        height: 113vh;
+        max-height: 800px;
     }
     @include desktop {
-        height: 130vh;
+        height: 105vh;
+        max-height: 900px;
     }
 
     &__album {
@@ -234,16 +239,19 @@ a {
         @include mobile {
             width: 90%; 
             height: 19vh; 
+            max-height: 120px;
             padding: 5%;
         }
         @include tablet {
             width: 55%; 
-            height: 25vh; 
+            height: 22vh; 
+            max-height: 200px;
             padding: 5% 3%;
         }
         @include desktop {
             width: 27%;
-            height: 120px;
+            height: 20vh;
+            max-height: 150px;
             padding: 0 0 4.5% 62%;
         } 
     }
@@ -465,11 +473,9 @@ a {
             }
         }
         &-logo {
+            padding: 4% 8% 4% 0;
+            width: 20px;
             
-            @include mobile {
-                padding: 4% 8% 4% 0;
-                width: 20px;
-            }
             @include tablet {
                 display: inline-flex;
                 padding: 0 8% 0 0;
@@ -482,10 +488,8 @@ a {
             }
         }
         &-logo2 {
+            width: 11px;
 
-            @include mobile {
-                width: 11px;
-            }
             @include tablet {
                 width: 14px;
             }

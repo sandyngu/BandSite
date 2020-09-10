@@ -1,31 +1,6 @@
 let API_KEY = '9a757c70-5aa3-46d0-b4fd-b232e544ed82';
+let commentsURL = ('https://project-1-api.herokuapp.com/comments?api_key=9a757c70-5aa3-46d0-b4fd-b232e544ed82');
 
-const commentsForm = document.querySelector('.comments-section__form');
-commentsForm.addEventListener('submit', function commentsFormHandler(event) {
-    event.preventDefault();
-    let name = event.target.name.value;
-    
-    let date = new Date();
-    let day = date.getDate();
-    let month = date.getMonth()+1;
-    let year = date.getFullYear();
-    date = month + '/' + day + '/' + year;
-    
-    let comment = event.target.comment.value;    
-    let newComment = {name:name, 
-        date:date,
-        comment:comment};
-        axios.res.unshift(newComment); /*NEED TO CHANGE COMMENTS*/
-        
-        commentsForm.reset();
-        deleteAll();
-        parentFunction();
-});
-    
-function deleteAll() {
-    document.querySelector('.comments-section__guestbook').remove();
-};
-    
 window.onload = parentFunction(); 
 
 function parentFunction() {
@@ -38,13 +13,11 @@ function parentFunction() {
     parentElement.appendChild(divider);      
 };
 
-let commentsURL = ('https://project-1-api.herokuapp.com/comments?api_key=9a757c70-5aa3-46d0-b4fd-b232e544ed82')
-
 axios.get(commentsURL)
     .then(res => {
-        console.log(res)
+        console.log(res);
     
-    res.data.forEach(res => {
+    res.data.forEach((res) => {
         
     let divider = document.createElement('div');
     divider.classList.add('divider', 'comments-section__guestbook-divider');
@@ -72,10 +45,58 @@ axios.get(commentsURL)
     guestbook.appendChild(divider);
 
     let time = new Date(res.timestamp); 
-        guestbookDate.innerText = time.toLocaleDateString(); 
+    guestbookDate.innerText = time.toLocaleDateString(); 
 
     guestbookName.innerText = res.name;
     guestbookText.innerText = res.comment;
+    
 })
-    .catch(err => console.log(err))
+        .catch(error => {
+            console.log(error);
+        });
 })
+    
+const commentsForm = document.querySelector('.comments-section__form');
+
+commentsForm.addEventListener('submit', function commentsFormHandler(event) {
+    event.preventDefault();
+
+    axios.post(commentsURL, {
+        name: commentsForm.name.value,
+        comment: commentsForm.comment.value,
+    })
+    .then(res => {
+        console.log(res);
+    })
+    .catch(error => {
+        console.log("Error", error.message);
+    })
+})
+
+// commentsForm.addEventListener('submit', function commentsFormHandler(event) {
+//     event.preventDefault();
+//     let name = event.target.name.value;
+    
+//     let date = new Date();
+//     let day = date.getDate();
+//     let month = date.getMonth()+1;
+//     let year = date.getFullYear();
+//     date = month + '/' + day + '/' + year;
+    
+//     let comment = event.target.comment.value;    
+//     let newComment = {name:name, 
+//         date:date,
+//         comment:comment};
+    
+//     comments.unshift(newComment); /*NEED TO CHANGE COMMENTS*/
+        
+//     commentsForm.reset();
+//     deleteAll();
+//     parentFunction();
+// });
+    
+function deleteAll() {
+    document.querySelector('.comments-section__guestbook').remove();
+}
+
+

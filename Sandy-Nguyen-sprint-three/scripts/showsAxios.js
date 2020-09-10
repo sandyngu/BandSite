@@ -81,6 +81,6 @@ axios.get(showsURL)
         showsTitle3.innerText = titles[2];
         showsLocation.innerText = res.location;
 
+    })
 })
-    .catch(err => console.log(err));   
-})
+.catch(err => console.log(err));   
