@@ -18,7 +18,6 @@ function parentFunction() {
 function loadComments() {
     axios.get(commentsURL)
         .then(res => {
-            console.log(res);
         
         res.data.forEach((res) => {
             
@@ -69,44 +68,33 @@ const commentsForm = document.querySelector('.comments-section__form');
 commentsForm.addEventListener('submit', function commentsFormHandler(event) {
     event.preventDefault();
 
-    axios.post(commentsURL, {
-        name: commentsForm.name.value,
-        comment: commentsForm.comment.value,
-    })
-    .then(res => {
-        // res.data.unshift(res.data.pop());
-        deleteAll();
-        parentFunction();
-        console.log(res);
-    })
-    .catch(error => {
-        console.log("Error", error.message);
-    })
+    let name = commentsForm.name.value;
+    let comment = commentsForm.comment.value; 
 
+    if (name == 0 && comment == 0) {
+        console.error('Give us a little love -- complete the fields before submitting!');
+    }
+        else if (name == 0) {
+            console.error('What do you have to hide? Tell us your name!');
+        }
+        else if (comment == 0) {
+            console.error("Don't you have anything nice to say? Include a comment!");
+        }
+        else {
+            axios.post(commentsURL, {
+            name: commentsForm.name.value,
+            comment: commentsForm.comment.value,
+            })
+                .then(res => {
+                    deleteAll();
+                    parentFunction();
+                    console.log(res);
+                })
+                .catch(error => {
+                    console.log("Error", error.message);
+                })        
+        }
     commentsForm.reset();
 })
-
-// commentsForm.addEventListener('submit', function commentsFormHandler(event) {
-//     event.preventDefault();
-//     let name = event.target.name.value;
-    
-//     let date = new Date();
-//     let day = date.getDate();
-//     let month = date.getMonth()+1;
-//     let year = date.getFullYear();
-//     date = month + '/' + day + '/' + year;
-    
-//     let comment = event.target.comment.value;    
-//     let newComment = {name:name, 
-//         date:date,
-//         comment:comment};
-    
-//     comments.unshift(newComment); /*NEED TO CHANGE COMMENTS*/
-        
-//     commentsForm.reset();
-//     deleteAll();
-//     parentFunction();
-// });
-    
 
 
