@@ -1,5 +1,6 @@
 @import 'partials/fonts';
 @import 'partials/mixins';
+@include font-sizes;
 
 body {
     font-family: 'Avenir';
@@ -10,65 +11,6 @@ body {
     background-color: $primary-background-color;
     border-radius: 5px;
     border: none;
-}
-
-/*Font Sizes*/
-
-h1 {
-    @include mobile {
-        font-size: $hero-mobile-fontsize;
-    }
-    @include tablet {
-        font-size: $hero-desktab-fontsize;
-    }
-    @include desktop {
-        font-size: $h1-desktab-fontsize;
-    }
-}
-h2 {
-    @include mobile {
-        font-size: $h2-mobile-fontsize;
-    }
-    @include tablet {
-        font-size: $h2-desktab-fontsize;
-    }
-    @include desktop {
-        font-size: $h2-desktab-fontsize;
-    }
-}
-h3 {
-    @include mobile {
-        font-size: $h3-mobile-fontsize;
-    }
-    @include tablet {
-        font-size: $h3-desktab-fontsize;
-    }
-    @include desktop {
-        font-size: $h3-desktab-fontsize;
-    }
-}
-h4 {
-    @include mobile {
-        font-size: $h4-mobile-fontsize;
-    }
-    @include tablet {
-        font-size: $h4-desktab-fontsize;
-    }
-    @include desktop {
-        font-size: $h4-desktab-fontsize;
-    }
-}
-p {
-
-    @include mobile {
-        font-size: $p-mobile-fontsize;
-    }
-    @include tablet {
-        font-size: $h4-desktab-fontsize;
-    }
-    @include desktop {
-        font-size: $h4-desktab-fontsize;
-    }
 }
 
 /*Navigation Bar*/
