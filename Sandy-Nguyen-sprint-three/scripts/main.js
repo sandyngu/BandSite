@@ -19,6 +19,10 @@ function loadComments() {
     axios.get(commentsURL)
         .then(res => {
         
+        res.data.sort(function sortData(a, b) {
+        return b.timestamp - a.timestamp
+        });
+        
         res.data.forEach((res) => {
             
         let divider = document.createElement('div');
@@ -51,11 +55,10 @@ function loadComments() {
         
         guestbookName.innerText = res.name;
         guestbookText.innerText = res.comment;
-    })  
-    })  
-
-    .catch(error => {
-        console.log(error);
+        })  
+        })  
+        .catch(error => {
+            console.log(error);
     });
 };
 
@@ -72,13 +75,22 @@ commentsForm.addEventListener('submit', function commentsFormHandler(event) {
     let comment = commentsForm.comment.value; 
 
     if (name == 0 && comment == 0) {
+        document.querySelector('.comments-section__form-input-name').style.backgroundColor = '#ECE7E7';
+        document.querySelector('.comments-section__form-input-comment').style.backgroundColor = '#ECE7E7';
         console.error('Give us a little love -- complete the fields before submitting!');
+        alert('Give us a little love -- complete the fields before submitting!');
+
+        return 
     }
         else if (name == 0) {
+            document.querySelector('.comments-section__form-input-name').style.backgroundColor = '#ECE7E7';
             console.error('What do you have to hide? Tell us your name!');
+            alert('What do you have to hide? Tell us your name!');
         }
         else if (comment == 0) {
+            document.querySelector('.comments-section__form-input-comment').style.backgroundColor = '#ECE7E7';
             console.error("Don't you have anything nice to say? Include a comment!");
+            alert("Don't you have anything nice to say? Include a comment!");
         }
         else {
             axios.post(commentsURL, {
@@ -93,8 +105,8 @@ commentsForm.addEventListener('submit', function commentsFormHandler(event) {
                 .catch(error => {
                     console.log("Error", error.message);
                 })        
+                commentsForm.reset();
         }
-    commentsForm.reset();
 })
 
 
