@@ -625,7 +625,7 @@ input {
 }
 .comments-section__form-input-name {
   border: 2px solid #323232;
-  width: 84.5%;
+  width: 87%;
   padding: 6%;
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
@@ -643,7 +643,7 @@ input {
 .comments-section__form-input-comment {
   resize: none;
   font-family: "Avenir";
-  width: 85%;
+  width: 87%;
   height: 13vh;
   padding: 6%;
 }
@@ -678,12 +678,12 @@ input {
 }
 .comments-section__button-comment {
   font-weight: 600;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.8px;
   float: right;
   color: white;
   font-size: 0.8rem;
-  width: 98%;
-  margin: 0 1% 15% 1%;
+  width: 100%;
+  margin: 0 0 15% 0;
   padding: 8% 4.3%;
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
@@ -913,7 +913,7 @@ input {
   }
 }
 .footer__heading-logo {
-  padding: 0 9% 0 0;
+  padding: 0 10% 0 0;
   width: 21px;
   vertical-align: center;
 }
@@ -1012,7 +1012,7 @@ input {
 @media screen and (min-width: 320px) and (max-width: 767px) {
   .footer__content {
     margin: 7% 0;
-    line-height: 17px;
+    line-height: 19px;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
