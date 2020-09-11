@@ -50,7 +50,7 @@ a {
         vertical-align: center;
 
         @include mobile {
-            margin: 5% auto;
+            margin: 3.5% auto;
         }
         @include tablet {
             padding-left: 3%;
@@ -78,14 +78,14 @@ a {
 
             @include mobile {
                 font-size: $h3-mobile-fontsize;
-                padding-bottom: 3%;
+                padding-bottom: 2.5%;
                 width: 50%;
             }        
             @include tablet {
                 display: inline-flex;
                 font-size: $h4-desktab-fontsize;
-                margin: 5% 0 0 8%;
-                padding: 0 1.5% 3% 1.5%;
+                margin: 7% 0 0 8%;
+                padding: 0 1.5% 4% 1.5%;
             }
             @include desktop {
                 display: inline-flex;
@@ -119,8 +119,8 @@ a {
     background-repeat: no-repeat;
     background-blend-mode: overlay;
     display: flex;
-    height: 40vh;
-    min-height: 200px;
+    height: 35vh;
+    min-height: 190px;
 
     @include tablet {
         height: 90vh;
@@ -257,7 +257,8 @@ a {
     background-color: $secondary-background-color;
 
     &__title {
-        padding: 10% 0 0 6%;
+        padding: 9% 0 0 6%;
+        margin: 0;
 
         @include tablet {
             padding: 6% 0 0 3%;
@@ -325,7 +326,7 @@ input {
     &__photo {
         background-image: url('/assets/images/Mohan-muruge.jpg');
         background-size: cover;
-        background-position: 20% 50%;
+        background-position: 15% 50%;
         height: 50px;
         width: 50px;
         border-radius: 50%;
@@ -420,7 +421,6 @@ input {
         
         &-title {
             color: $comments-title-color;
-            font-weight: 600;
             margin: 1% 0;
             font-size: $p-mobile-fontsize;
             
@@ -437,10 +437,10 @@ input {
         letter-spacing: 0.5px;
         float: right;
         color: white;
-        font-size: $h3-mobile-fontsize;
+        font-size: $h4-mobile-fontsize;
         width: 98%;
         margin: 0 1% 15% 1%;
-        padding: 7% 4.3%;
+        padding: 8% 4.3%;
                
         @include tablet {
             font-size: $p-desktab-fontsize;
@@ -597,6 +597,7 @@ input {
             }
         }
         &-logo-container {
+            padding: 2% 0 4% 0;
 
             @include mobile {
                 width: 50%;
@@ -612,8 +613,9 @@ input {
             }
         }
         &-logo {
-            padding: 4% 8% 4% 0;
-            width: 20px;
+            padding: 0 9% 0 0;
+            width: 21px;
+            vertical-align: center;
             
             @include tablet {
                 display: inline-flex;
@@ -627,7 +629,7 @@ input {
             }
         }
         &-logo2 {
-            width: 11px;
+            width: 12.5px;
             
             @include tablet {
                 width: 14px;
@@ -635,6 +637,9 @@ input {
             @include desktop {
                 width: 14px;
             }
+        }
+        &-logo3 {
+            width: 24px;
         }
     }
     &__main-logo {
