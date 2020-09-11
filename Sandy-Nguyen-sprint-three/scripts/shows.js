@@ -1,6 +1,9 @@
 const titles = ['DATES', 'VENUE', 'LOCATION'];
 
 let API_KEY = '9a757c70-5aa3-46d0-b4fd-b232e544ed82';
+let showsURL = 'https://project-1-api.herokuapp.com/showdates?api_key=9a757c70-5aa3-46d0-b4fd-b232e544ed82';
+
+/*When the window loads, this function creates the parent div*/
 
 window.onload = parentFunction();
 
@@ -12,6 +15,8 @@ function parentFunction() {
     
     headings();
 };
+
+/*This function creates the headings on the shows page*/
 
 function headings() {
     let heading = document.createElement('div');
@@ -31,56 +36,58 @@ function headings() {
     showsContainer.appendChild(heading);
     heading.appendChild(headingsTitleDate);
     heading.appendChild(headingsTitleVenue);
-    heading.appendChild(headingsTitleLocation);   
+    heading.appendChild(headingsTitleLocation); 
+    
+    loadShowDates();
 };
 
-let showsURL = 'https://project-1-api.herokuapp.com/showdates?api_key=9a757c70-5aa3-46d0-b4fd-b232e544ed82';
+/*This function takes the show dates information from the API and creates elements for all the shows, displaying them on the page*/
 
-axios.get(showsURL)
-    .then(res => {
+function loadShowDates() {
+    axios.get(showsURL)
+        .then(res => {
 
-    res.data.forEach(res => {
+        res.data.forEach(res => {
 
-        let showsList = document.createElement('div');
-        showsList.classList.add('main-section__shows');
-        let showsTitle1 = document.createElement('p');
-        showsTitle1.classList.add('main-section__shows-content', 'main-section__shows-title');
-        let showsDate = document.createElement('p');
-        showsDate.classList.add('main-section__shows-content', 'main-section__shows-date');
-        let showsTitle2 = document.createElement('p');
-        showsTitle2.classList.add('main-section__shows-content', 'main-section__shows-title');
-        let showsVenue = document.createElement('p');
-        showsVenue.classList.add('main-section__shows-content', 'main-section__shows-venue');
-        let showsTitle3 = document.createElement('p');
-        showsTitle3.classList.add('main-section__shows-content', 'main-section__shows-title');
-        let showsLocation = document.createElement('p');
-        showsLocation.classList.add('main-section__shows-content', 'main-section__shows-location');
-        let button = document.createElement('button');
-        button.classList.add('button', 'main-section__shows-button');
-        button.innerText = "BUY TICKETS";
-        let divider = document.createElement('div');
-        divider.classList.add('divider', 'main-section__shows-divider');
+            let showsList = document.createElement('div');
+            showsList.classList.add('main-section__shows');
+            let datesTitle = document.createElement('p');
+            datesTitle.classList.add('main-section__shows-content', 'main-section__shows-title');
+            let showsDate = document.createElement('p');
+            showsDate.classList.add('main-section__shows-content', 'main-section__shows-date');
+            let venuesTitle = document.createElement('p');
+            venuesTitle.classList.add('main-section__shows-content', 'main-section__shows-title');
+            let showsVenue = document.createElement('p');
+            showsVenue.classList.add('main-section__shows-content', 'main-section__shows-venue');
+            let locationTitle = document.createElement('p');
+            locationTitle.classList.add('main-section__shows-content', 'main-section__shows-title');
+            let showsLocation = document.createElement('p');
+            showsLocation.classList.add('main-section__shows-content', 'main-section__shows-location');
+            let button = document.createElement('button');
+            button.classList.add('button', 'main-section__shows-button');
+            button.innerText = "BUY TICKETS";
+            let divider = document.createElement('div');
+            divider.classList.add('divider', 'main-section__shows-divider');
 
-        let showsContainer = document.querySelector('.main-section__shows-container');
+            let showsContainer = document.querySelector('.main-section__shows-container');
 
-        showsContainer.appendChild(showsList);
-        showsList.appendChild(showsTitle1);
-        showsList.appendChild(showsDate);
-        showsList.appendChild(showsTitle2);
-        showsList.appendChild(showsVenue);
-        showsList.appendChild(showsTitle3);
-        showsList.appendChild(showsLocation);
-        showsList.appendChild(button);
-        showsList.appendChild(divider);
+            showsContainer.appendChild(showsList);
+            showsList.appendChild(datesTitle);
+            showsList.appendChild(showsDate);
+            showsList.appendChild(venuesTitle);
+            showsList.appendChild(showsVenue);
+            showsList.appendChild(locationTitle);
+            showsList.appendChild(showsLocation);
+            showsList.appendChild(button);
+            showsList.appendChild(divider);
 
-
-        showsTitle1.innerText = titles[0];
-        showsDate.innerText = res.date;
-        showsTitle2.innerText = titles[1];
-        showsVenue.innerText = res.place;
-        showsTitle3.innerText = titles[2];
-        showsLocation.innerText = res.location;
-
-    })
-})
-.catch(err => console.log(err));   
+            datesTitle.innerText = titles[0];
+            showsDate.innerText = res.date;
+            venuesTitle.innerText = titles[1];
+            showsVenue.innerText = res.place;
+            locationTitle.innerText = titles[2];
+            showsLocation.innerText = res.location;
+        });
+        })
+        .catch(err => console.log(err));  
+};
