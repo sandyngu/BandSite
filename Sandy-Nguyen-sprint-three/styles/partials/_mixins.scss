@@ -1,14 +1,12 @@
 @import 'variables';
 
 @mixin mobile {
-    @media screen and (min-width: $mobile-breakpoint) 
-    and (max-width: 767px) {
+    @media screen and (min-width: $mobile-breakpoint) {
         @content;
     }
 }
 @mixin tablet {
-    @media screen and (min-width: $tablet-breakpoint) 
-    and (max-width: 1199px) {
+    @media screen and (min-width: $tablet-breakpoint) {
         @content;
     }
 }

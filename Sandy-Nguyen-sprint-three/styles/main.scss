@@ -2,112 +2,10 @@
 @import 'partials/mixins';
 @include font-sizes;
 
-body {
-    font-family: 'Avenir';
-    margin: 0;
-}
-
-.button {
-    background-color: $primary-background-color;
-    border-radius: 5px;
-    border: none;
-}
-
 ::placeholder {
     color: $primary-background-color;
 }
-
-/*Navigation Bar*/
   
-a {
-    text-decoration: none;
-    text-align: center;
-    color: white;
-    
-    @include mobile {
-        font-size: $p-mobile-fontsize;
-        width: 50%;
-    }
-
-    &:hover {
-        animation: forfun 1.5s linear infinite;
-    }
-}
-
-.nav-bar {
-    background-color: $primary-background-color;
-    display: flex;
-    align-items: center;
-
-    @include mobile {
-        flex-wrap: wrap;
-    }
-
-    &__main-logo {
-        display: inline-flex;
-        height: 20px;
-        vertical-align: center;
-
-        @include mobile {
-            margin: 3.5% auto;
-        }
-        @include tablet {
-            padding-left: 3%;
-        }
-        @include desktop {
-            padding-left: 10%;
-        }
-    }
-    &__menu {
-        display: flex;
-        margin: 0 auto;
-        width: 100%;
-        padding: 0;
-        
-        @include mobile {
-            padding: 4% 0 0 0;
-            text-align: center;
-        }
-
-        &-link {
-            color: white;
-            margin: 0;
-            list-style-type: none;
-            vertical-align: center;
-
-            @include mobile {
-                font-size: $h3-mobile-fontsize;
-                padding-bottom: 2.5%;
-                width: 50%;
-            }        
-            @include tablet {
-                font-size: $h4-desktab-fontsize;
-                vertical-align: bottom;
-                margin: 7% 0 0 8%;
-                padding: 0 2.5% 4% 0.5%;
-                
-            }
-            @include desktop {
-                font-size: $h4-desktab-fontsize;
-                margin: 4.5% 0 0 7%;
-                padding: 0 1.5% 2.75% 0.5%;
-            }
-
-            &--active {
-                border-bottom: 5px solid white;
-                
-                @include mobile {
-                    width: 50%;
-                }
-            }
-
-            &:hover {
-                animation: forfun 1.5s linear infinite;
-            }
-        }
-    }
-}
-
 /*Hero*/
 
 .hero {
@@ -183,39 +81,35 @@ a {
         }
         @include desktop {
             padding: 1% 15% 0 14.5%;
+            width: 70%;
         }
     }
     &__quote1 {
-
-        @include mobile {
-            line-height: 22px;
-            font-weight: 600;
-            letter-spacing: 0.4px;
-        }
+        line-height: 22px;
+        font-weight: 600;
+        letter-spacing: 0.4px;
 
         @include tablet {
             line-height: 35px;
+            font-weight: bold;
         }
 
         @include desktop {
             line-height: 32px;
-            width: 95%;
         }
     }
     &__quote2 {
         font-weight: 600;
+        font-size: $h4-mobile-fontsize;
+        padding: 4% 0 8% 0;
 
-        @include mobile {
-            font-size: $h4-mobile-fontsize;
-            padding: 8% 0;
-        }
         @include tablet {
             font-size: $namelabel-desktab-fontsize;
-            padding: 2% 0;
+            padding: 0.5% 0 2% 0;
         }
         @include desktop {
             font-size: $h4-desktab-fontsize;
-            padding: 2% 0;
+            padding: 1% 0 1.2% 0;
         }
     }
     &__content-title {
@@ -224,20 +118,22 @@ a {
         @include mobile {
             font-weight: 600;
         }
+        @include tablet {
+            font-weight: bold;
+            margin: 4% 0 3% 0;
+        }
     }
     &__container2 {
         display: flex;
         justify-content: center;
+        padding-bottom: 7%;
+        flex-wrap: wrap;
         
-        @include mobile {
-            padding-bottom: 7%;
-            flex-wrap: wrap;
-        }
         @include tablet {
-            padding-bottom: 3.5%;
+            padding-bottom: 3%;
         }
         @include desktop {
-            padding-bottom: 2.2%;
+            padding-bottom: 3%;
         }
     }
     &__content {
@@ -247,8 +143,11 @@ a {
         
         @include tablet {
             font-size: $h4-desktab-fontsize;
-            padding: 0 3%;
-            line-height: 23px;        
+            padding: 2% 3%;
+            margin: 0;
+            line-height: 23px;  
+            width: 44%;
+     
         }
         @include desktop {
             font-size: $h4-desktab-fontsize;
@@ -298,7 +197,7 @@ a {
             margin: 1.5%;
         }
         @include desktop {
-            width: 27.6%;
+            width: 25.2%;
             margin: 1%;
         }
 
@@ -308,7 +207,7 @@ a {
     }
 }
 
-/*Comments Section*/
+/*Comments Form*/
 
 input {
     font-family:'Avenir';
@@ -372,7 +271,7 @@ input {
             margin-right: 10%;
         }
         @include desktop {
-            margin-left: 8%;
+            margin-left: 13%;
         }
     }
     &__form {
@@ -389,7 +288,6 @@ input {
                 margin-bottom: 4%;
             }
             @include desktop {
-                width: 50%;
                 margin: 0 10% 3% 0;
 
             }
@@ -404,7 +302,7 @@ input {
                     padding: 3%;
                 }
                 @include desktop {
-                    width: 50%;
+                    width: 62%;
                     padding: 2%;
                 }
             }
@@ -421,7 +319,7 @@ input {
                     padding: 3%;
                 }
                 @include desktop {
-                    width: 50%;
+                    width: 62%;
                     height: 9vh;
                     padding: 2%;
                 }
@@ -461,7 +359,7 @@ input {
         @include desktop {
             font-size: $h4-desktab-fontsize;
             width: 21%;
-            margin: 0 45.5% 3% 1%;
+            margin: 0 33.5% 3% 1%;
             padding: 2.2%;
         }
     }
@@ -470,6 +368,8 @@ input {
 .divider {
     border-bottom: 2px solid $circle-divider-color;
 }
+
+/*Comments Guestbook*/
 
 .comments-section__guestbook {
     margin: 0 auto;
@@ -482,24 +382,23 @@ input {
         margin-left: 15%;
     }
     @include desktop {
-        width: 48.4%;
-        margin-left: 27%;
+        width: 47.7%;
+        margin-left: 26.5%;
     }
     
     &-entry {
         display: flex;
         flex-wrap: wrap;
         margin: 2% 5% 2% 0;
-        width: 100%;
-        
-        @include mobile {
-            justify-content: space-between;
-        }
+        justify-content: space-between;
+
         @include tablet {
             margin: 2% 4% 0 0;
+            justify-content: flex-start;
         }
         @include desktop {
             margin: 2% 5% 0 0;
+            justify-content: flex-start;
         }
     }
     &-photo {
@@ -517,7 +416,7 @@ input {
         }
     }
     &-divider {
-        width: 90%;
+        width: 92%;
         margin: 0 auto;
     }
     &-container {
@@ -557,7 +456,7 @@ input {
         margin: 4% 0;
         display: inline-flex;
         width: 99.5%;
-        line-height: 150%;
+        line-height: 20px;
 
         @include tablet {
             font-size: $h4-desktab-fontsize;
@@ -566,164 +465,7 @@ input {
         @include desktop {
             font-size: $h4-desktab-fontsize;
             margin: 2% 0;
+            width: 100%;
         }
-    }
-}
-
-/*Get In Touch Section*/
-
-.footer {
-    background-color: $primary-background-color;
-    color: white;
-    padding-bottom: 3%;
-
-    &__heading {
-        padding: 5% 0;
-        
-        @include tablet {
-            display: flex;
-            padding: 6% 0 2.5% 0;
-        }
-        @include desktop {
-            display: flex;
-            padding: 3% 0 0 0; 
-        }
-
-        &-title {
-            margin: 0;
-
-            @include mobile {
-                min-width: 100px;
-                padding: 8% 2% 5% 4%;
-                font-size: 2.2rem;
-            }
-            @include tablet {
-                min-width: 250px;
-                padding: 1% 2% 0 3%;
-            }
-            @include desktop {
-                min-width: 250px;
-                padding: 1% 2% 0 10%;
-            }
-        }
-        &-logo-container {
-            padding: 2% 0 4% 0;
-
-            @include mobile {
-                width: 50%;
-                padding-left: 4%;
-            }
-            @include tablet {
-                width: 100%;
-            }
-            @include desktop {
-                width: 100%;
-            }
-        }
-        &-logo {
-            padding: 0 10% 0 0;
-            width: 21px;
-            
-            @include tablet {
-                padding: 0 6% 0 0;
-                width: 25px;
-            }
-            @include desktop {
-                padding: 0 3% 0 0;
-                width: 25px;
-            }
-        }
-        &-logo2 {
-            width: 12.5px;
-            
-            @include tablet {
-                width: 13.5px;
-            }
-            @include desktop {
-                width: 14px;
-            }
-        }
-    }
-    &__main-logo {
-        display: inline-flex;
-        height: 20px;
-        display: none; 
-
-        @include tablet {
-            display: inline-flex;
-            padding: 2% 3%;
-        }   
-        @include desktop {
-            display: inline-flex;
-            padding: 1.5% 10% 2% 2%;
-        }
-    }
-    &__container {
-        display: flex;
-        justify-content: space-between;
-        margin: 0;
-        flex-direction: column;
-        padding: 0 4%;
-        width: 92%;
-
-        @include tablet {
-            flex-direction: row;
-            padding: 0 0 0 3%;
-            width: 93%;
-        }
-        @include desktop {
-            flex-direction: row;
-            padding: 0 10%;
-            width: 63%;
-        }
-    }
-    &__content {
-        display: flex;
-        margin: 6.3% 0;
-        line-height: 19px;
-
-        @include tablet {
-            font-size: $h4-desktab-fontsize;
-            padding-top: 18px;
-            line-height: 20px;
-            margin: 0;
-        }
-        @include desktop {
-            font-size: $h4-desktab-fontsize;
-            padding-top: 23px;
-            line-height: 20px;
-            margin: 0;
-        }
-
-        &1 {
-            font-size: $h4-mobile-fontsize;
-            font-weight: 600;
-            margin: 0;
-            letter-spacing: 0.5px;
-            line-height: 17px;
-
-            @include tablet {
-                font-size: $namelabel-desktab-fontsize;
-                line-height: 23px;
-            }
-            @include desktop {
-                font-size: $h4-desktab-fontsize;
-                line-height: 23px;
-            }
-        }
-    }
-    &__copyright {
-            width: 60%;
-            line-height: 18px;
-            padding: 0;
-            margin: 2% 0 8% 4%;
-
-            @include tablet {
-                margin: 4.5% 0 3% 3%;
-            }
-            @include desktop {
-                margin: 2.5% 0 0.5% 10%;
-            }
-
     }
 }
