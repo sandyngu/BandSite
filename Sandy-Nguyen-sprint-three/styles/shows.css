@@ -527,4 +527,10 @@
 .main-section__shows-button--hidden {
   visibility: hidden;
 }
+
+.main-section__shows-button:hover {
+  cursor: pointer;
+  -webkit-animation: forfun 1.5s linear infinite;
+          animation: forfun 1.5s linear infinite;
+}
 /*# sourceMappingURL=shows.css.map */

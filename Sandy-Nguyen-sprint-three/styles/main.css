@@ -674,6 +674,12 @@ input {
   }
 }
 
+.comments-section__button-comment:hover {
+  cursor: pointer;
+  -webkit-animation: forfun 1.5s linear infinite;
+          animation: forfun 1.5s linear infinite;
+}
+
 .divider {
   border-bottom: 2px solid #E1E1E1;
 }

@@ -258,6 +258,10 @@
             &--hidden {
                 visibility: hidden;
             }
+            &:hover {
+                cursor: pointer;
+                animation: forfun 1.5s linear infinite;
+            }
         }
     }
 }
