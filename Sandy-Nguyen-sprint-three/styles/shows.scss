@@ -22,21 +22,24 @@
         min-height: 700px;
     }
     @include desktop {
-        height: 80vh;
+        height: 110vh;
         max-height: 700px;
+        min-height: 650px;
     }
 
     &__album {
         color: white;
         margin: 0;
-        font-weight: bold;
+        font-weight: 500;
         padding: 20% 0 1% 6%;
         
         @include tablet {
+            font-weight: 600;
             padding: 13% 0 3% 3%;
         }
         @include desktop {
-            padding: 11% 0 3% 11%;
+            font-weight: 600;
+            padding: 13% 0 2% 11%;
         }
     }
     &__container {
@@ -84,7 +87,7 @@
 
         @include tablet {
             width: 55%; 
-            height: 22vh; 
+            height: 25vh; 
             min-height: 120px;
             max-height: 150px;
             padding: 5% 3%;
@@ -167,7 +170,7 @@
             color: $date-color;
             letter-spacing: 0.75px;
             margin-top: 10%;
-            font-weight: 600;
+            font-weight: 500;
 
             @include tablet {
                 display: none;
@@ -212,6 +215,7 @@
         }
         &-content {
             margin: 5.5% 0;
+            letter-spacing: 0.2px;
 
             @include tablet {
                 margin: 3.5% 0;

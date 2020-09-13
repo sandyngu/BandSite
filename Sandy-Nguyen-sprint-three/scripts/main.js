@@ -81,24 +81,40 @@ commentsForm.addEventListener('submit', function commentsFormHandler(event) {
     let comment = commentsForm.comment.value; 
 
     if (name == 0 && comment == 0) {
-        document.querySelector('.comments-section__form-input-name').style.backgroundColor = '#ECE7E7';
-        document.querySelector('.comments-section__form-input-comment').style.backgroundColor = '#ECE7E7';
+        document.querySelector('.comments-section__form-input-name').style.backgroundColor = '#FFF0F0';
+        document.querySelector('.comments-section__form-input-name').style.borderColor = '#FF0000';
+        document.querySelector('.comments-section__form-input-comment').style.backgroundColor = '#FFF0F0';
+        document.querySelector('.comments-section__form-input-comment').style.borderColor = '#FF0000';
         console.error('Give us a little love -- complete the fields before submitting!');
+
+        return 
     }
         else if (name == 0) {
-            document.querySelector('.comments-section__form-input-name').style.backgroundColor = '#ECE7E7';
+            document.querySelector('.comments-section__form-input-name').style.backgroundColor = '#FFF0F0';
+            document.querySelector('.comments-section__form-input-name').style.borderColor = '#FF0000';
+            document.querySelector('.comments-section__form-input-comment').style.backgroundColor = '#FAFAFA';
+            document.querySelector('.comments-section__form-input-comment').style.borderColor = '#AFAFAF';
             console.error('What do you have to hide? Tell us your name!');
         }
         else if (comment == 0) {
-            document.querySelector('.comments-section__form-input-comment').style.backgroundColor = '#ECE7E7';
+            document.querySelector('.comments-section__form-input-name').style.backgroundColor = '#FAFAFA';
+            document.querySelector('.comments-section__form-input-name').style.borderColor = '#AFAFAF';
+            document.querySelector('.comments-section__form-input-comment').style.backgroundColor = '#FFF0F0';
+            document.querySelector('.comments-section__form-input-comment').style.borderColor = '#FF0000';
             console.error("Don't you have anything nice to say? Include a comment!");
         }
         else {
+            document.querySelector('.comments-section__form-input-name').style.backgroundColor = '#FAFAFA';
+            document.querySelector('.comments-section__form-input-name').style.borderColor = '#AFAFAF';
+            document.querySelector('.comments-section__form-input-comment').style.backgroundColor = '#FAFAFA';
+            document.querySelector('.comments-section__form-input-comment').style.borderColor = '#AFAFAF';
+
             axios.post(commentsURL, {
             name: commentsForm.name.value,
             comment: commentsForm.comment.value,
             })
                 .then(res => {
+                    commentsForm.reset();
                     deleteAll();
                     parentFunction();
                     console.log(res);
@@ -106,8 +122,6 @@ commentsForm.addEventListener('submit', function commentsFormHandler(event) {
                 .catch(err => {
                     console.log(err);
                 })        
-                commentsForm.reset();
-        }
+            }
 })
-
 

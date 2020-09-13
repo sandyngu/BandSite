@@ -294,7 +294,7 @@ input {
 
             &-name {
                 border: 2px solid $primary-background-color;
-                width: 87%;
+                width: 86.5%;
                 padding: 6%;
                 
                 @include tablet {
@@ -309,7 +309,7 @@ input {
             &-comment {
                 resize: none;
                 font-family: 'Avenir';
-                width: 87%;
+                width: 86.5%;
                 height: 13vh;
                 padding: 6%;
 
@@ -319,8 +319,9 @@ input {
                     padding: 3%;
                 }
                 @include desktop {
+                    font-size: $h4-desktab-fontsize;
                     width: 62%;
-                    height: 9vh;
+                    height: 11vh;
                     padding: 2%;
                 }
             }
@@ -358,9 +359,9 @@ input {
         }
         @include desktop {
             font-size: $h4-desktab-fontsize;
-            width: 21%;
+            width: 26%;
             margin: 0 33.5% 3% 1%;
-            padding: 2.2%;
+            padding: 2.8%;
         }
         &:hover {
             cursor: pointer;

@@ -584,7 +584,7 @@ input {
 
 .comments-section__form-input-name {
   border: 2px solid #323232;
-  width: 87%;
+  width: 86.5%;
   padding: 6%;
 }
 
@@ -605,7 +605,7 @@ input {
 .comments-section__form-input-comment {
   resize: none;
   font-family: 'Avenir';
-  width: 87%;
+  width: 86.5%;
   height: 13vh;
   padding: 6%;
 }
@@ -620,8 +620,9 @@ input {
 
 @media screen and (min-width: 1200px) {
   .comments-section__form-input-comment {
+    font-size: 0.86rem;
     width: 62%;
-    height: 9vh;
+    height: 11vh;
     padding: 2%;
   }
 }
@@ -668,9 +669,9 @@ input {
 @media screen and (min-width: 1200px) {
   .comments-section__button-comment {
     font-size: 0.86rem;
-    width: 21%;
+    width: 26%;
     margin: 0 33.5% 3% 1%;
-    padding: 2.2%;
+    padding: 2.8%;
   }
 }
 

@@ -179,27 +179,30 @@
 
 @media screen and (min-width: 1200px) {
   .hero {
-    height: 80vh;
+    height: 110vh;
     max-height: 700px;
+    min-height: 650px;
   }
 }
 
 .hero__album {
   color: white;
   margin: 0;
-  font-weight: bold;
+  font-weight: 500;
   padding: 20% 0 1% 6%;
 }
 
 @media screen and (min-width: 768px) {
   .hero__album {
+    font-weight: 600;
     padding: 13% 0 3% 3%;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .hero__album {
-    padding: 11% 0 3% 11%;
+    font-weight: 600;
+    padding: 13% 0 2% 11%;
   }
 }
 
@@ -263,7 +266,7 @@
 @media screen and (min-width: 768px) {
   .hero__music-player {
     width: 55%;
-    height: 22vh;
+    height: 25vh;
     min-height: 120px;
     max-height: 150px;
     padding: 5% 3%;
@@ -391,7 +394,7 @@
   color: #AFAFAF;
   letter-spacing: 0.75px;
   margin-top: 10%;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 @media screen and (min-width: 768px) {
@@ -466,6 +469,7 @@
 
 .main-section__shows-content {
   margin: 5.5% 0;
+  letter-spacing: 0.2px;
 }
 
 @media screen and (min-width: 768px) {
