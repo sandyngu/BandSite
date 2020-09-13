@@ -1,4 +1,4 @@
-const titles = ['DATES', 'VENUE', 'LOCATION'];
+const titles = ['DATE', 'DATES', 'VENUE', 'LOCATION'];
 
 let API_KEY = '9a757c70-5aa3-46d0-b4fd-b232e544ed82';
 let showsURL = 'https://project-1-api.herokuapp.com/showdates?api_key=9a757c70-5aa3-46d0-b4fd-b232e544ed82';
@@ -22,21 +22,26 @@ function headings() {
     let heading = document.createElement('div');
     heading.classList.add('main-section__shows-headings');
     let headingsTitleDate = document.createElement('p');
-    headingsTitleDate.classList.add('main-section__shows-headings-title', 'main-section__shows-headings-title-date');
-    headingsTitleDate.innerText = titles[0];
+    headingsTitleDate.classList.add('main-section__shows-content', 'main-section__shows-headings-title', 'main-section__shows-headings-title-date');
     let headingsTitleVenue = document.createElement('p');
-    headingsTitleVenue.classList.add('main-section__shows-headings-title', 'main-section__shows-headings-title-venue');
-    headingsTitleVenue.innerText = titles[1];
+    headingsTitleVenue.classList.add('main-section__shows-content', 'main-section__shows-headings-title', 'main-section__shows-headings-title-venue');
     let headingsTitleLocation = document.createElement('p');
-    headingsTitleLocation.classList.add('main-section__shows-headings-title', 'main-section__shows-headings-title-location');
-    headingsTitleLocation.innerText = titles[2];
+    headingsTitleLocation.classList.add('main-section__shows-content', 'main-section__shows-headings-title', 'main-section__shows-headings-title-location');
+    let button = document.createElement('button');
+    button.classList.add('button', 'main-section__shows-button', 'main-section__shows-button--hidden');
+    button.innerText = "BUY TICKETS";
 
     let showsContainer = document.querySelector('.main-section__shows-container');
     
     showsContainer.appendChild(heading);
     heading.appendChild(headingsTitleDate);
     heading.appendChild(headingsTitleVenue);
-    heading.appendChild(headingsTitleLocation); 
+    heading.appendChild(headingsTitleLocation);
+    heading.appendChild(button); 
+
+    headingsTitleDate.innerText = titles[1];
+    headingsTitleVenue.innerText = titles[2];
+    headingsTitleLocation.innerText = titles[3];
     
     loadShowDates();
 };
@@ -82,10 +87,10 @@ function loadShowDates() {
             showsList.appendChild(divider);
 
             datesTitle.innerText = titles[0];
-            showsDate.innerText = res.date;
-            venuesTitle.innerText = titles[1];
+            showsDate.innerText = res.date.toLowerCase();
+            venuesTitle.innerText = titles[2];
             showsVenue.innerText = res.place;
-            locationTitle.innerText = titles[2];
+            locationTitle.innerText = titles[3];
             showsLocation.innerText = res.location;
         });
         })

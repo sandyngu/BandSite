@@ -330,7 +330,7 @@ input {
             color: $comments-title-color;
             margin: 1% 0;
             font-size: $p-mobile-fontsize;
-            font-weight: 600;
+            font-weight: 500;
             
             @include tablet {
                 font-size: $p-desktab-fontsize;
@@ -425,7 +425,7 @@ input {
     }
     &-name {
         display: inline-flex;
-        font-weight: 600;
+        font-weight: 500;
         margin: 6% 0 0 0;
         font-size: $h3-mobile-fontsize;
 
@@ -445,11 +445,13 @@ input {
 
         @include tablet {
             margin: 0;
-            font-size: $namelabel-desktab-fontsize;
+            font-size: $h4-desktab-fontsize;
+            padding-top: 0.5%;
         }
         @include desktop {
             margin: 0.5% 2% 0 0;
-            font-size: $namelabel-desktab-fontsize;
+            font-size: $h4-desktab-fontsize;
+            padding-top: 0.5%;
         }
     }
     &-text {

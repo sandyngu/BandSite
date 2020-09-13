@@ -50,7 +50,7 @@ a {
         
         @include tablet {
             padding-left: 3%;
-            margin: 3% 0; 
+            margin: 3% 4% 3% 0; 
         }
         @include desktop {
             padding-left: 10%;
@@ -86,8 +86,8 @@ a {
 
             @include tablet {
                 font-size: $h4-desktab-fontsize;
-                margin: 6.6% 0 0 5%;
-                padding: 0 1% 4% 0;
+                padding: 6.6% 0 4% 0;
+                margin-right: 5%;
                 width: 20%;
                 
             }

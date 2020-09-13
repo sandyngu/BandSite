@@ -12,6 +12,12 @@
 @font-face {
   font-family: 'Avenir';
   src: url("../assets/fonts/AvenirNextProLT/Linotype-AvenirNextLTPro-Medium.otf") format("OpenType");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'Avenir';
+  src: url("../assets/fonts/AvenirNextProLT/Linotype-AvenirNextLTPro-Demi.otf") format("OpenType");
   font-weight: 600;
 }
 
@@ -624,7 +630,7 @@ input {
   color: #AFAFAF;
   margin: 1% 0;
   font-size: 0.74rem;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 @media screen and (min-width: 768px) {
@@ -763,7 +769,7 @@ input {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  font-weight: 600;
+  font-weight: 500;
   margin: 6% 0 0 0;
   font-size: 0.91rem;
 }
@@ -793,14 +799,16 @@ input {
 @media screen and (min-width: 768px) {
   .comments-section__guestbook-date {
     margin: 0;
-    font-size: 1rem;
+    font-size: 0.86rem;
+    padding-top: 0.5%;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .comments-section__guestbook-date {
     margin: 0.5% 2% 0 0;
-    font-size: 1rem;
+    font-size: 0.86rem;
+    padding-top: 0.5%;
   }
 }
 
