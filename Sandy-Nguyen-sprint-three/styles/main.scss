@@ -1,10 +1,5 @@
 @import 'partials/fonts';
 @import 'partials/mixins';
-@include font-sizes;
-
-::placeholder {
-    color: $primary-background-color;
-}
   
 /*Hero*/
 
@@ -209,6 +204,10 @@
 
 /*Comments Form*/
 
+::placeholder {
+    color: $primary-background-color;
+}
+
 input {
     font-family:'Avenir';
     font-size: $h3-mobile-fontsize;
@@ -262,11 +261,8 @@ input {
         display: flex;
         flex-wrap: wrap;
         justify-content: flex-end;
-        margin: 0 auto;
-        
-        @include mobile {
-            margin-right: 5%;
-        }
+        margin-right: 5%;
+    
         @include tablet {
             margin-right: 10%;
         }
@@ -328,7 +324,7 @@ input {
         }
         
         &-title {
-            color: $comments-title-color;
+            color: $date-comments-title-color;
             margin: 1% 0;
             font-size: $p-mobile-fontsize;
             font-weight: 500;
@@ -354,7 +350,7 @@ input {
         @include tablet {
             font-size: $h4-desktab-fontsize;
             width: 37%;
-            margin: 0 12% 5% 1%;
+            margin: 0 11.5% 5% 1%;
             padding: 4%;
         }
         @include desktop {
@@ -446,7 +442,7 @@ input {
     &-date {
         display: inline-flex;
         margin: 6% 0 0 0;
-        color: $date-color;
+        color: $date-comments-title-color;
 
         @include tablet {
             margin: 0;

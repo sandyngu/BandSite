@@ -63,112 +63,6 @@
   }
 }
 
-@media screen and (min-width: 320px) {
-  h1 {
-    font-size: 1.5rem;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  h1 {
-    font-size: 4rem;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  h1 {
-    font-size: 4rem;
-  }
-}
-
-@media screen and (min-width: 320px) {
-  h2 {
-    font-size: 1.5rem;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  h2 {
-    font-size: 2.25rem;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  h2 {
-    font-size: 2.25rem;
-  }
-}
-
-@media screen and (min-width: 320px) {
-  h3 {
-    font-size: 0.91rem;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  h3 {
-    font-size: 1.43rem;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  h3 {
-    font-size: 1.43rem;
-  }
-}
-
-@media screen and (min-width: 320px) {
-  h4 {
-    font-size: 0.78rem;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  h4 {
-    font-size: 0.86rem;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  h4 {
-    font-size: 0.86rem;
-  }
-}
-
-@media screen and (min-width: 320px) {
-  p {
-    font-size: 0.74rem;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  p {
-    font-size: 0.86rem;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  p {
-    font-size: 0.86rem;
-  }
-}
-
-::-webkit-input-placeholder {
-  color: #323232;
-}
-
-:-ms-input-placeholder {
-  color: #323232;
-}
-
-::-ms-input-placeholder {
-  color: #323232;
-}
-
-::placeholder {
-  color: #323232;
-}
-
 /*Hero*/
 .hero {
   -webkit-box-align: center;
@@ -457,6 +351,19 @@
 }
 
 /*Comments Form*/
+::-webkit-input-placeholder {
+  color: #323232;
+}
+:-ms-input-placeholder {
+  color: #323232;
+}
+::-ms-input-placeholder {
+  color: #323232;
+}
+::placeholder {
+  color: #323232;
+}
+
 input {
   font-family: 'Avenir';
   font-size: 0.91rem;
@@ -537,13 +444,7 @@ input {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  margin: 0 auto;
-}
-
-@media screen and (min-width: 320px) {
-  .comments-section__container {
-    margin-right: 5%;
-  }
+  margin-right: 5%;
 }
 
 @media screen and (min-width: 768px) {
@@ -661,7 +562,7 @@ input {
   .comments-section__button-comment {
     font-size: 0.86rem;
     width: 37%;
-    margin: 0 12% 5% 1%;
+    margin: 0 11.5% 5% 1%;
     padding: 4%;
   }
 }
