@@ -70,7 +70,7 @@ function deleteAll() {
      document.querySelector('.comments-section__guestbook').remove();
 }
 
-/*When the form is completed and submitted, the new comment is posted to the existing array in the API. When certain areas of the comment form are missing, the comment will not be added and an error message will occur. The 3 default comments will be deleted and reloaded on the window with the new comment on top*/
+/*When the form is completed and submitted, the new comment is posted to the existing array in the API, resetting the contents in the form. When certain areas of the comment form are missing, the comment will not be added and an error message will occur. The 3 default comments will be deleted and reloaded on the window with the new comment on top*/
 
 const commentsForm = document.querySelector('.comments-section__form');
 
@@ -86,8 +86,6 @@ commentsForm.addEventListener('submit', function commentsFormHandler(event) {
         document.querySelector('.comments-section__form-input-comment').style.backgroundColor = '#FFF0F0';
         document.querySelector('.comments-section__form-input-comment').style.borderColor = '#FF0000';
         console.error('Give us a little love -- complete the fields before submitting!');
-
-        return 
     }
         else if (name == 0) {
             document.querySelector('.comments-section__form-input-name').style.backgroundColor = '#FFF0F0';
